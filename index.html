@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Bhanushali | Red Team & PT</title>
+    <title>Om Bhanushali | Red Team</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="cursor-dot"></div>
+
     <div class="space-background">
         <div class="stars"></div>
         <div class="twinkling"></div>
     </div>
 
     <nav class="glass-nav">
-        <div class="nav-brand">TSX-NINJA // <span>SYSTEMS</span></div>
+        <div class="nav-brand">TSX-NINJA</div>
         <div class="nav-links">
             <a href="index.html" class="active">ARCHIVE</a>
             <a href="services.html">SERVICES & CONTACT</a>
@@ -22,37 +24,65 @@
     </nav>
 
     <div class="container">
-        <header class="hero glass-panel">
-            <div class="glitch" data-text="OM NITIN BHANUSHALI">OM NITIN BHANUSHALI</div>
+        <header class="hero glass-panel text-center">
+            <div class="glitch" data-text="OM BHANUSHALI">OM BHANUSHALI</div>
             <h2 class="cyber-subtitle">Red Team Security | Vulnerability Analyst</h2>
             <p>Identifying critical vulnerabilities before the adversaries do. Over 150+ organizations secured. Mastering the art of offensive security across web and mobile architectures.</p>
             <div class="hero-buttons">
-                <a href="services.html" class="btn primary-btn">HIRE FOR RED TEAM</a>
-                <a href="https://github.com/tsx-ninja" target="_blank" class="btn secondary-btn">VIEW GITHUB</a>
+                <a href="services.html" class="btn primary-btn">INITIATE CONTACT</a>
             </div>
         </header>
 
-        <div class="grid-2">
-            <section class="glass-panel">
-                <h3 class="neon-heading">/// CURRENT DIRECTIVE</h3>
-                <div class="milestone">
-                    <h4>Junior PT & Triage Analyst</h4>
-                    <p class="highlight">LEXZUR DWC-LLC | 2025 - Present</p>
-                    <p>Driving manual and automated Black Box Testing. Enhancing triage workflows via accurate CVSS scoring and guiding QA remediation.</p>
-                </div>
-            </section>
+        <section class="glass-panel chamber">
+            <h3 class="neon-heading">/// EXPERIENCE CHAMBER</h3>
+            <div class="milestone">
+                <h4>Junior PT & Triage Analyst</h4>
+                <p class="highlight">LEXZUR DWC-LLC | 2025 - Present</p>
+                <p>Driving manual and automated Black Box Testing. Enhancing triage workflows via accurate CVSS scoring.</p>
+            </div>
+            <div class="milestone" style="margin-top: 25px;">
+                <h4>Bug Bounty Hunter & Security Researcher</h4>
+                <p class="highlight">Freelance | 150+ Organizations Secured</p>
+                <p>Identified critical vulnerabilities (IDOR, XSS, SSRF, ATO) across major platforms. Custom tool development for advanced recon.</p>
+            </div>
+        </section>
 
-            <section class="glass-panel">
-                <h3 class="neon-heading">/// TOOLKIT & CERTS</h3>
-                <div class="tech-stack">
-                    <span class="badge">BlackArch</span>
-                    <span class="badge">Burp Suite Pro</span>
-                    <span class="badge">Nmap / Nuclei</span>
-                    <span class="badge">eMAPT</span>
-                    <span class="badge">CEH V13</span>
+        <section class="glass-panel chamber">
+            <h3 class="neon-heading">/// CERTIFICATIONS & ACHIEVEMENTS</h3>
+            <div class="cert-grid">
+                <div class="cert-card">
+                    <h4>eMAPT</h4>
+                    <p class="highlight">Mobile App Pen Tester</p>
+                    <img src="emapt.jpg" alt="eMAPT Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/400x250/11151c/00f3ff?text=Upload+emapt.jpg+to+GitHub'">
                 </div>
-            </section>
-        </div>
+                <div class="cert-card">
+                    <h4>CEH V13</h4>
+                    <p class="highlight">Certified Ethical Hacker</p>
+                    <img src="ceh.jpg" alt="CEH Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/400x250/11151c/bc13fe?text=Upload+ceh.jpg+to+GitHub'">
+                </div>
+            </div>
+        </section>
+
+        <section class="glass-panel chamber">
+            <h3 class="neon-heading">/// ARSENAL & TOOLKIT</h3>
+            <div class="tech-stack">
+                <span class="badge">Burp Suite Pro</span>
+                <span class="badge">BlackArch Linux</span>
+                <span class="badge">Nmap / Nuclei</span>
+                <span class="badge">Shodan</span>
+                <span class="badge">Qualys</span>
+                <span class="badge">SecurityTrails</span>
+                <span class="badge">DNS Enum</span>
+                <span class="badge">Frida / ADB</span>
+            </div>
+        </section>
     </div>
+
+    <script>
+        const dot = document.querySelector('.cursor-dot');
+        window.addEventListener('mousemove', (e) => {
+            dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+        });
+    </script>
 </body>
 </html>
