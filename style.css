@@ -22,11 +22,9 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     min-height: 100vh;
-    /* --- HIDES THE DEFAULT ARROW --- */
     cursor: none !important; 
 }
 
-/* Hide arrow over clickable items too */
 a, button, input, textarea { cursor: none !important; }
 
 /* --- GLOWING MOUSE TRACKER --- */
@@ -75,4 +73,59 @@ body::before {
     border-radius: 8px; padding: 2.5rem; margin: 1.5rem 0; transition: var(--transition);
     position: relative; overflow: hidden;
 }
-.glass-panel
+.glass-panel:hover {
+    border-color: var(--accent-cyan); background: rgba(0, 217, 255, 0.05); 
+    box-shadow: var(--glow-cyan); transform: translateY(-5px);
+}
+.neon-heading { font-size: 2rem; margin-bottom: 2rem; color: var(--accent-cyan); text-align: center; text-shadow: var(--glow-cyan); letter-spacing: 2px; }
+
+/* Texts */
+.highlight { color: var(--text-primary); font-weight: bold; }
+.milestone { margin-bottom: 25px; }
+.milestone h4 { color: var(--accent-cyan); font-size: 1.2rem; margin-bottom: 5px; }
+
+/* ===== BUTTONS ===== */
+.btn {
+    display: inline-block; padding: 0.8rem 2.5rem; border: 2px solid var(--accent-cyan);
+    background: rgba(0, 217, 255, 0.1); color: var(--accent-cyan); text-decoration: none;
+    font-weight: bold; letter-spacing: 1px; text-transform: uppercase; transition: var(--transition);
+}
+.btn:hover { background: var(--accent-cyan); color: var(--bg-dark); box-shadow: var(--glow-cyan); }
+
+/* ===== CERTIFICATES ===== */
+.cert-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+.cert-card { text-align: center; padding: 1.5rem; background: rgba(26, 32, 44, 0.3); border: 1px solid var(--accent-purple); border-radius: 8px; transition: var(--transition); }
+.cert-card:hover { border-color: var(--accent-cyan); box-shadow: var(--glow-cyan); transform: translateY(-5px); }
+.cert-img { width: 100%; border-radius: 4px; margin-top: 15px; border: 1px solid var(--border-color); }
+.cert-card h4 { color: var(--accent-cyan); margin-bottom: 5px; }
+
+/* ===== SKILLS / BADGES ===== */
+.tech-stack { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+.badge {
+    padding: 0.5rem 1rem; background: rgba(0, 217, 255, 0.1); border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan); border-radius: 20px; font-size: 0.85rem; transition: var(--transition);
+}
+.badge:hover { background: var(--accent-cyan); color: var(--bg-dark); box-shadow: var(--glow-cyan); transform: scale(1.05); }
+
+/* ===== SERVICES GRID ===== */
+.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.service-card h3 { color: var(--accent-cyan); margin-bottom: 10px; }
+
+/* ===== CONTACT FORM ===== */
+.cyber-form { display: flex; flex-direction: column; gap: 1.5rem; max-width: 600px; margin: 0 auto; }
+.cyber-form input, .cyber-form textarea {
+    background: rgba(10, 14, 39, 0.5); border: 1px solid var(--border-color); padding: 1rem;
+    color: var(--text-primary); font-family: 'Courier New', monospace; border-radius: 4px; transition: var(--transition);
+}
+.cyber-form input:focus, .cyber-form textarea:focus { border-color: var(--accent-cyan); outline: none; box-shadow: var(--glow-cyan); }
+
+/* ===== FOOTER ===== */
+.glass-footer { text-align: center; padding: 2rem; border-top: 2px solid var(--accent-cyan); margin-top: 4rem; background: rgba(10, 14, 39, 0.95); }
+.glass-footer p { color: var(--accent-cyan); text-shadow: var(--glow-cyan); margin-bottom: 1rem; font-weight: bold; }
+.footer-links a { color: var(--text-secondary); text-decoration: none; margin: 0 1rem; transition: var(--transition); text-transform: uppercase;}
+.footer-links a:hover { color: var(--accent-pink); text-shadow: var(--glow-pink); }
+
+/* ===== ANIMATIONS ===== */
+@keyframes glitch { 0%, 100% { text-shadow: var(--glow-cyan); } 50% { text-shadow: var(--glow-purple); } }
+
+@media (max-width: 768px) { .nav-links { display: none; } }
