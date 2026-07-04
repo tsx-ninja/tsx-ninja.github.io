@@ -6,6 +6,8 @@
     <title>Om Bhanushali | Red Team</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- 3rd Party Animation Library (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="cursor-dot"></div>
@@ -24,16 +26,17 @@
     </nav>
 
     <div class="container">
-        <header class="hero glass-panel text-center">
+        <header class="hero glass-panel text-center" data-aos="fade-down">
             <div class="glitch" data-text="OM BHANUSHALI">OM BHANUSHALI</div>
             <h2 class="cyber-subtitle">Red Team Security | Vulnerability Analyst</h2>
-            <p>Identifying critical vulnerabilities before the adversaries do. Over 150+ organizations secured. Mastering the art of offensive security across web and mobile architectures.</p>
+            <p>Identifying critical vulnerabilities before the adversaries do. Mastering the art of offensive security across web and mobile architectures.</p>
             <div class="hero-buttons">
                 <a href="services.html" class="btn primary-btn">INITIATE CONTACT</a>
             </div>
         </header>
 
-        <section class="glass-panel chamber">
+        <!-- EXPERIENCE CHAMBER -->
+        <section class="glass-panel chamber" data-aos="fade-up">
             <h3 class="neon-heading">/// EXPERIENCE CHAMBER</h3>
             <div class="milestone">
                 <h4>Junior PT & Triage Analyst</h4>
@@ -47,23 +50,30 @@
             </div>
         </section>
 
-        <section class="glass-panel chamber">
+        <!-- CERTIFICATION CHAMBER -->
+        <section class="glass-panel chamber" data-aos="fade-up">
             <h3 class="neon-heading">/// CERTIFICATIONS & ACHIEVEMENTS</h3>
             <div class="cert-grid">
-                <div class="cert-card">
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="100">
                     <h4>eMAPT</h4>
                     <p class="highlight">Mobile App Pen Tester</p>
-                    <img src="emapt.jpg" alt="eMAPT Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/400x250/11151c/00f3ff?text=Upload+emapt.jpg+to+GitHub'">
+                    <img src="image_9f924f.png" alt="eMAPT Certificate" class="cert-img">
                 </div>
-                <div class="cert-card">
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="200">
                     <h4>CEH V13</h4>
                     <p class="highlight">Certified Ethical Hacker</p>
-                    <img src="ceh.jpg" alt="CEH Certificate" class="cert-img" onerror="this.src='https://via.placeholder.com/400x250/11151c/bc13fe?text=Upload+ceh.jpg+to+GitHub'">
+                    <img src="image_9f928c.jpg" alt="CEH Certificate" class="cert-img">
+                </div>
+                <div class="cert-card" data-aos="zoom-in" data-aos-delay="300">
+                    <h4>Android Bug Bounty</h4>
+                    <p class="highlight">EC-Council (Hunt Like a Rat)</p>
+                    <img src="image_9f928e.jpg" alt="Android Certificate" class="cert-img">
                 </div>
             </div>
         </section>
 
-        <section class="glass-panel chamber">
+        <!-- ARSENAL CHAMBER -->
+        <section class="glass-panel chamber" data-aos="fade-up">
             <h3 class="neon-heading">/// ARSENAL & TOOLKIT</h3>
             <div class="tech-stack">
                 <span class="badge">Burp Suite Pro</span>
@@ -78,7 +88,21 @@
         </section>
     </div>
 
+    <!-- Social Footer -->
+    <footer class="glass-footer">
+        <p>/// SECURE COMMS DIRECTORY</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@TSNINJA20" target="_blank">YouTube</a>
+            <a href="mailto:ombhanushali81@rediffmail.com">Email</a>
+        </div>
+    </footer>
+
+    <!-- Scripts for Tracker and Animations -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init({ duration: 1000, once: true });
+        
         const dot = document.querySelector('.cursor-dot');
         window.addEventListener('mousemove', (e) => {
             dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
