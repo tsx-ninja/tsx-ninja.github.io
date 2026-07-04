@@ -16,6 +16,11 @@ body {
     overflow-x: hidden;
 }
 
+/* --- Hide Default Cursor to prevent the double-arrow illusion --- */
+body, a, button, input, textarea {
+    cursor: none !important;
+}
+
 /* --- Animated Space Background --- */
 .space-background {
     position: fixed;
@@ -177,7 +182,3 @@ h1, h2, h3, h4, .nav-brand {
 .footer-links a:hover { color: var(--cyber-purple); text-shadow: 0 0 10px rgba(188, 19, 254, 0.6); }
 
 @media (max-width: 768px) { .glitch { font-size: 2rem; } .nav-links { display: none; } }
-/* --- Hide Default Cursor --- */
-body, a, button, input, textarea {
-    cursor: none !important;
-}
