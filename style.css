@@ -25,7 +25,7 @@ body {
 }
 
 .stars {
-    background: #fff url('https://raw.githubusercontent.com/tsx-ninja/kodemintin/main/stars.png') repeat top center;
+    background: transparent;
     z-index: -2;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
@@ -33,17 +33,11 @@ body {
 }
 
 .twinkling {
-    background: transparent url('https://raw.githubusercontent.com/tsx-ninja/kodemintin/main/twinkling.png') repeat top center;
+    background: transparent;
     z-index: -1;
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     width: 100%; height: 100%;
-    animation: move-twink-back 200s linear infinite;
-}
-
-@keyframes move-twink-back {
-    from {background-position: 0 0;}
-    to {background-position: -10000px 5000px;}
 }
 
 /* --- Layout & Glassmorphism --- */
@@ -225,5 +219,5 @@ h1, h2, h3, h4, .nav-brand {
 @media (max-width: 768px) {
     .grid-2 { grid-template-columns: 1fr; }
     .glitch { font-size: 2rem; }
-    .nav-links { display: none; } /* Add hamburger menu logic later if needed */
+    .nav-links { display: none; }
 }
