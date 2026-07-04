@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=tsx-ninja&fontSize=90&animation=fadeIn&fontAlignY=38&desc=Red%20Team%20Security%20%7C%20Bug%20Hunter&descAlignY=51&descAlign=62"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=timeGradient&height=250&section=header&text=Om%20Bhanushali&fontSize=70&animation=fadeIn&fontAlignY=38&desc=Red%20Team%20Security%20%7C%20Bug%20Hunter&descAlignY=51&descAlign=62"/>
 </div>
 
 ### <div align="center">I'm Om Bhanushali, a Penetration Tester, Security Researcher, and Bug Hunter. With a strong passion for offensive security, my goal is to safeguard digital assets and contribute to a more secure online community.</div>
@@ -13,8 +13,8 @@
 - 🧠 **Experience in:** Web App Pen Testing, Mobile Pen Testing (eMAPT), Vulnerability Management.
 - 📚 **Improving knowledge in:** Advanced Reconnaissance & Offensive Security.
 - 🚀 **Lifelong learner** — always exploring and breaking things to build better defenses.
-- 📫 **Reach me out at:** ombhanushali81@rediffmail.com
-- 🌐 **Portfolio:** [tsx-ninja.github.io](https://https://tsx-ninja.github.io/)
+- 📺 **Watch my content on:** [YouTube](https://www.youtube.com/@TSNINJA20)
+- 🌐 **Portfolio:** [tsx-ninja.github.io](https://tsx-ninja.github.io/)
 
 ### ⚡ Present Status
 - 👉 **Working as:** Junior Penetration Tester & Triage Analyst @ LEXZUR DWC-LLC.
@@ -41,5 +41,5 @@
 <p align="center">
   <a href="https://linkedin.com/in/tsxninja"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
   <a href="https://medium.com/@tsxninja2004"><img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"/></a>
-  <a href="mailto:ombhanushali81@rediffmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+  <a href="https://www.youtube.com/@TSNINJA20"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white"/></a>
 </p>
