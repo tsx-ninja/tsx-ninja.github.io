@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Manuals & Media | Om Bhanushali</title>
+    <link rel="stylesheet" href="style.css?v=13">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-dot"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-brand">Om Bhanushali</div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="index.html#experience">EXPERIENCE</a>
+            <a href="blogs.html" class="active">BLOGS</a>
+            <a href="op.html">OPERATIONS</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="hero glass-panel text-center" data-aos="fade-down" style="min-height: auto; padding: 40px;">
+            <h1 class="neon-heading">FIELD MANUALS & MEDIA</h1>
+            <p class="cyber-subtitle">📝 Tactical Write-ups & Video Transmissions</p>
+            <p>A repository of my vulnerability research, methodology deep-dives, and custom automation workflows. Documenting the attack paths to help the community build stronger defenses.</p>
+        </header>
+
+        <h2 class="neon-heading" style="margin-top: 40px;" data-aos="fade-right">MEDIUM WRITE-UPS</h2>
+        <div class="services-grid">
+            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-cyan); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">📓</div>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Exploiting Complex IDORs</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">A deep dive into chaining low-privileged IDOR vulnerabilities for complete account takeover.</p>
+                <a href="https://medium.com/" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">READ DIRECTIVE</a>
+            </div>
+            
+            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="200" style="border-color: var(--accent-cyan); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">🔍</div>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Mobile API Recon Tactics</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Techniques for bypassing certificate pinning and mapping hidden mobile APIs.</p>
+                <a href="https://medium.com/" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">READ DIRECTIVE</a>
+            </div>
+        </div>
+
+        <h2 class="neon-heading" style="margin-top: 60px;" data-aos="fade-right">TACTICAL FEEDS</h2>
+        <div class="services-grid">
+            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-pink); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">▶️</div>
+                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">Custom Automation with Nuclei</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Building and executing custom templates to scale vulnerability discovery across targets.</p>
+                <a href="https://www.youtube.com/@TSNINJA20" target="_blank" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(255, 0, 110, 0.1); padding: 0.5rem 1.5rem; font-size: 0.8rem;">INITIALIZE VIDEO</a>
+            </div>
+
+            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="200" style="border-color: var(--accent-pink); text-align: center;">
+                <div style="font-size: 2.5rem; margin-bottom: 15px;">▶️</div>
+                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">BlackArch Operations</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Setting up the ultimate offensive security environment on BlackArch Linux.</p>
+                <a href="https://www.youtube.com/@TSNINJA20" target="_blank" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(255, 0, 110, 0.1); padding: 0.5rem 1.5rem; font-size: 0.8rem;">INITIALIZE VIDEO</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="glass-footer">
+        <p>⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">SOCIAL</p>
+        <div class="footer-links">
+            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank">LinkedIn</a>
+            <a href="https://www.youtube.com/@TSNINJA20" target="_blank">YouTube</a>
+            <a href="mailto:ombhanushali81@rediffmail.com">Email</a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.75rem; margin-top: 2.5rem; letter-spacing: 1px;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+        const dot = document.querySelector('.cursor-dot');
+        window.addEventListener('mousemove', (e) => {
+            dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+        });
+    </script>
+</body>
+</html>
