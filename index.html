@@ -75,4 +75,52 @@
                 <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">IDOR</span>
                 <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">XSS</span>
                 <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">SSRF</span>
-                <span style="padding: 8px
+                <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">SQLI</span>
+                <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">CSRF</span>
+                <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">XXE</span>
+                <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">RCE</span>
+                <span style="padding: 8px 15px; border: 1px solid var(--accent-cyan); border-radius: 4px; color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05);">LFI/RFI</span>
+            </div>
+        </section>
+
+        <section id="contact" class="glass-panel chamber" data-aos="fade-up" style="text-align: center; margin-bottom: 40px; padding: 40px 20px;">
+            <h2 class="neon-heading" style="margin-bottom: 20px;">INITIATE CONTACT</h2>
+            
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 30px; line-height: 1.6;">
+                Have a security concern? Want to discuss a penetration testing engagement? Reach out.
+            </p>
+            
+            <a href="op.html#contact-form" class="btn" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05); text-decoration: none; border-radius: 4px; font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+                CONTACT FORM
+            </a>
+        </section>
+
+    </div>
+
+    <footer class="glass-footer" style="text-align: center; padding: 40px 20px; margin-top: 40px;">
+        <p style="font-weight: bold; color: var(--accent-cyan);">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
+        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem; margin-top: 15px;">SOCIAL</p>
+        <div style="margin: 20px 0;">
+            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">LINKEDIN</a>
+            <a href="https://www.youtube.com/@TSNINJA20" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">YOUTUBE</a>
+            <a href="op.html#contact-form" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">EMAIL</a>
+        </div>
+        <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 20px;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        const dot = document.querySelector('.cursor-dot');
+        if (dot) {
+            window.addEventListener('mousemove', (e) => {
+                dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+            });
+        }
+    </script>
+</body>
+</html>
