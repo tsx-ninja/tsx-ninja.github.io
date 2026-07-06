@@ -7,6 +7,60 @@
     <title>Om Bhanushali | Penetration Tester & Security Researcher</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Modal Background */
+        .modal-overlay {
+            display: none; 
+            position: fixed; 
+            z-index: 2000; 
+            left: 0; 
+            top: 0; 
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.85); 
+            backdrop-filter: blur(5px);
+            align-items: center; 
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        /* Form Inputs */
+        .cyber-input {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            background: rgba(10, 15, 30, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            color: #fff;
+            border-radius: 4px;
+            font-family: monospace;
+            transition: border 0.3s ease;
+            box-sizing: border-box;
+        }
+        
+        .cyber-input:focus {
+            outline: none;
+            border: 1px solid var(--accent-cyan);
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Close Button */
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: var(--accent-cyan);
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-modal:hover {
+            color: var(--accent-pink);
+        }
+    </style>
 </head>
 <body>
     <div class="cursor-dot"></div>
@@ -33,7 +87,7 @@
             </p>
             <div>
                 <a href="op.html" class="btn" style="margin: 0 10px; display: inline-block; padding: 10px 20px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: transparent; text-decoration: none; border-radius: 4px;">VIEW OPERATIONS</a>
-                <a href="op.html#contact-form" class="btn" style="margin: 0 10px; display: inline-block; padding: 10px 20px; border: 1px solid var(--accent-purple); color: var(--accent-purple); background: transparent; text-decoration: none; border-radius: 4px;">REQUEST ENGAGEMENT</a>
+                <button onclick="openModal()" class="btn" style="margin: 0 10px; display: inline-block; padding: 10px 20px; border: 1px solid var(--accent-purple); color: var(--accent-purple); background: transparent; text-decoration: none; border-radius: 4px; cursor: pointer;">REQUEST ENGAGEMENT</button>
             </div>
         </header>
 
@@ -90,11 +144,26 @@
                 Have a security concern? Want to discuss a penetration testing engagement? Reach out.
             </p>
             
-            <a href="op.html#contact-form" class="btn" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05); text-decoration: none; border-radius: 4px; font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease;">
+            <button onclick="openModal()" class="btn" style="display: inline-block; padding: 12px 30px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: rgba(0, 255, 255, 0.05); text-decoration: none; border-radius: 4px; font-weight: bold; letter-spacing: 1px; transition: all 0.3s ease; cursor: pointer;">
                 CONTACT FORM
-            </a>
+            </button>
         </section>
 
+    </div>
+
+    <div id="contactModal" class="modal-overlay">
+        <div class="glass-panel chamber" style="position: relative; max-width: 500px; width: 90%; padding: 40px 30px; text-align: left; transform: translateY(-20px); transition: transform 0.3s ease;" id="modalContent">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 class="neon-heading" style="font-size: 1.5rem; margin-bottom: 25px; text-align: center;">SECURE TRANSMISSION</h2>
+            
+            <input type="text" placeholder="YOUR NAME / ALIAS" class="cyber-input">
+            <input type="email" placeholder="SECURE RETURN EMAIL" class="cyber-input">
+            <textarea placeholder="ENTER DIRECTIVE OR SCOPE (Target details, Timeline, Goals)..." rows="5" class="cyber-input" style="resize: vertical;"></textarea>
+            
+            <button class="btn" style="width: 100%; padding: 15px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: rgba(0, 255, 255, 0.1); cursor: pointer; font-weight: bold; letter-spacing: 1px;">
+                TRANSMIT MESSAGE
+            </button>
+        </div>
     </div>
 
     <footer class="glass-footer" style="text-align: center; padding: 40px 20px; margin-top: 40px;">
@@ -103,7 +172,7 @@
         <div style="margin: 20px 0;">
             <a href="https://www.linkedin.com/in/tsxninja/" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">LINKEDIN</a>
             <a href="https://www.youtube.com/@TSNINJA20" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">YOUTUBE</a>
-            <a href="op.html#contact-form" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">EMAIL</a>
+            <span onclick="openModal()" style="color: var(--text-secondary); margin: 0 10px; cursor: pointer; text-decoration: none;">EMAIL</span>
         </div>
         <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 20px;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
@@ -115,11 +184,40 @@
             once: true
         });
 
+        // Custom Cursor Logic
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
                 dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
             });
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('contactModal');
+        const modalContent = document.getElementById('modalContent');
+
+        function openModal() {
+            modal.style.display = 'flex';
+            // Slight delay for smooth fade-in effect
+            setTimeout(() => {
+                modal.style.opacity = '1';
+                modalContent.style.transform = 'translateY(0)';
+            }, 10);
+        }
+
+        function closeModal() {
+            modal.style.opacity = '0';
+            modalContent.style.transform = 'translateY(-20px)';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 300); // Wait for transition to finish
+        }
+
+        // Close modal if user clicks outside the glass panel
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                closeModal();
+            }
         }
     </script>
 </body>
