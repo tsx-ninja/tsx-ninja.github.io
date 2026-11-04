@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Enterprise Network Security Architecture | Om Bhanushali">
-    <title>Enterprise Network Architecture | Om Bhanushali</title>
+    <title>Enterprise Network Security Architecture | Om Bhanushali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,92 +15,91 @@
     <div class="cursor-dot"></div>
 
     <div class="spatial-ambient" aria-hidden="true">
-        <div class="ambient-mesh-grid"></div>
         <div class="ambient-orb orb-primary"></div>
         <div class="ambient-orb orb-secondary"></div>
     </div>
 
     <nav class="glass-nav">
-        <a href="index.html" class="nav-brand">
-            <span class="status-indicator"></span> OM.BHANUSHALI // SEC-OPS
-        </a>
+        <a href="index.html" class="nav-brand">Om Bhanushali</a>
         <div class="nav-links">
-            <a href="index.html">COMMAND</a>
-            <a href="projects.html" class="active">TELEMETRY</a>
-            <a href="blogs.html">RESEARCH</a>
+            <a href="index.html">HOME</a>
+            <a href="projects.html" class="active">PROJECTS</a>
+            <a href="blogs.html">BLOGS</a>
             <a href="op.html">OPERATIONS</a>
         </div>
     </nav>
 
     <div class="container">
         <header class="hero text-center" data-aos="fade-down">
-            <div class="hero-badge">
-                <span>🛡️ INFRASTRUCTURE DEFENSE TELEMETRY</span>
-            </div>
             <h1 class="glitch" data-text="NETWORK ARCHITECTURE">NETWORK ARCHITECTURE</h1>
             <p class="cyber-subtitle">
-                THREE-TIER HIERARCHICAL ENTERPRISE SECURITY DESIGN
+                🛡️ Three-Tier Hierarchical Enterprise Network Security Design
             </p>
             <p class="hero-description">
-                Designed a secure, scalable three-tier hierarchical network architecture implementing strict VLAN segmentation, secure routing protocols, and Access Control Lists (ACLs) to enforce traffic filtering.
+                Designed a secure, scalable three-tier hierarchical network architecture for corporate environments implementing VLAN segmentation, secure routing protocols, and strict Access Control Lists (ACLs) to enforce traffic filtering.
             </p>
             <div class="hero-actions">
-                <a href="projects.html" class="btn btn-secondary">← BACK TO TELEMETRY</a>
+                <a href="projects.html" class="btn btn-secondary">← BACK TO PROJECTS</a>
                 <a href="op.html#contact-form" class="btn btn-primary">DISCUSS ARCHITECTURE</a>
             </div>
         </header>
 
         <section class="glass-panel chamber" data-aos="fade-up">
-            <h2 class="neon-heading">ARCHITECTURAL TIERS</h2>
-            <div class="spatial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+            <h2 class="neon-heading">ARCHITECTURAL OVERVIEW</h2>
+            <div class="spatial-grid" style="margin-bottom: 0;">
                 <div class="experience-item" style="margin-bottom: 0;">
                     <span class="card-tag">TIER 1 — CORE & PERIMETER</span>
-                    <h3 class="role-title" style="font-size: 1.1rem; margin-top: 4px;">High-Speed Backbone</h3>
-                    <p class="section-text" style="font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">Redundant core routing layer enforcing perimeter security policies and deterministic packet forwarding.</p>
+                    <h3 class="role-title">High-Speed Backbone & Routing</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Redundant core routing layer enforcing perimeter security policies and deterministic packet forwarding between enterprise zones.
+                    </p>
                 </div>
                 <div class="experience-item" style="margin-bottom: 0;">
                     <span class="card-tag">TIER 2 — DISTRIBUTION & ACLS</span>
-                    <h3 class="role-title" style="font-size: 1.1rem; margin-top: 4px;">Policy Enforcement</h3>
-                    <p class="section-text" style="font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">Extended Access Control Lists and inter-VLAN routing isolating sensitive server subnets from lateral movement.</p>
+                    <h3 class="role-title">Policy Enforcement & Filtering</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Extended Access Control Lists (ACLs) and inter-VLAN routing rules isolating sensitive administrative and server subnets from unauthorized lateral movement.
+                    </p>
                 </div>
                 <div class="experience-item" style="margin-bottom: 0;">
                     <span class="card-tag">TIER 3 — ACCESS LAYER</span>
-                    <h3 class="role-title" style="font-size: 1.1rem; margin-top: 4px;">VLAN Segmentation</h3>
-                    <p class="section-text" style="font-size: 0.9rem; margin-top: 8px; margin-bottom: 0;">Logical endpoint isolation across departmental zones using port security and broadcast containment.</p>
+                    <h3 class="role-title">Departmental VLAN Isolation</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Logical segmentation across departmental endpoints using dedicated VLANs, port security, and broadcast domain containment.
+                    </p>
                 </div>
             </div>
         </section>
 
         <section class="glass-panel chamber" data-aos="fade-up">
-            <h2 class="neon-heading">TOPOLOGY & VERIFICATION LOGS</h2>
+            <h2 class="neon-heading">TOPOLOGY, CONFIGURATION & VERIFICATION LOGS</h2>
             <p class="section-text">
-                Implementation artifacts covering hierarchical topology design, VLAN configuration, routing tables, and ACL verification tests:
+                Implementation artifacts covering hierarchical topology design, VLAN & trunk configuration, routing tables, and ACL packet verification tests:
             </p>
-            
-            <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 20px;">
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-04 200656.png" alt="Topology View 1" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">Three-Tier Network Topology Layout</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-04 200656.png" alt="Enterprise Network Topology View 1" loading="lazy">
+                    <div class="gallery-caption">Three-Tier Network Topology & Subnet Layout</div>
                 </div>
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-04 200710.png" alt="Topology View 2" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">VLAN Segmentation & Trunk Links</div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-04 200710.png" alt="Enterprise Network Topology View 2" loading="lazy">
+                    <div class="gallery-caption">VLAN Segmentation & Distribution Layer Links</div>
                 </div>
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-06 132723.png" alt="Routing Config" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">Router Interface Routing Configuration</div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 132723.png" alt="Routing and ACL Configuration" loading="lazy">
+                    <div class="gallery-caption">Router Interface & Secure Routing Configuration</div>
                 </div>
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-06 133121.png" alt="ACL Verification" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">Extended ACL Rules & Traffic Filters</div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 133121.png" alt="Access Control List Policy Verification" loading="lazy">
+                    <div class="gallery-caption">Extended ACL Rules & Traffic Filtering Policies</div>
                 </div>
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-06 133204.png" alt="Inter-VLAN" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">Inter-VLAN Connectivity Verification</div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 133204.png" alt="Inter-VLAN Verification" loading="lazy">
+                    <div class="gallery-caption">Inter-VLAN Connectivity & Policy Verification</div>
                 </div>
-                <div class="gallery-item" style="background: rgba(255,255,255,0.025); border: 1px solid var(--glass-border); border-radius: 18px; overflow: hidden;">
-                    <img src="Screenshot 2026-07-06 141819.png" alt="Packet Validation" style="width: 100%; height: 190px; object-fit: cover; display: block;" loading="lazy">
-                    <div class="gallery-caption" style="padding: 12px 16px; font-size: 0.82rem; color: var(--text-secondary);">End-to-End Packet Telemetry Validation</div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 141819.png" alt="End-to-End Packet Verification" loading="lazy">
+                    <div class="gallery-caption">End-to-End Segmentation & Telemetry Validation</div>
                 </div>
             </div>
         </section>
@@ -108,12 +107,12 @@
 
     <footer class="glass-footer">
         <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p class="footer-label">CHANNELS</p>
+        <p class="footer-label">CONNECT</p>
         <div class="footer-links">
-            <a href="url?id=28">EMAIL</a>
+            <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
             <a href="tel:+918879291949">+91 8879291949</a>
-            <a href="index.html">COMMAND</a>
-            <a href="projects.html">TELEMETRY</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="op.html">OPERATIONS</a>
         </div>
         <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
@@ -132,8 +131,13 @@
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3;
+                const rotateY = ((x - centerX) / centerX) * 3;
+
                 el.style.transition = 'transform 0.08s ease-out';
-                el.style.transform = `perspective(1000px) rotateX(${(((y - rect.height/2)/(rect.height/2)) * -3).toFixed(2)}deg) rotateY(${(((x - rect.width/2)/(rect.width/2)) * 3).toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
                 el.style.setProperty('--mouse-y', `${y}px`);
             });
