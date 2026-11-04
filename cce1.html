@@ -3,140 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="CCE-1: Integrated Enterprise Network Design by Om Bhanushali">
-    <title>CCE-1: Integrated Enterprise Network Design | Om Bhanushali</title>
+    <meta name="description" content="Enterprise Network Security Architecture | Om Bhanushali">
+    <title>Enterprise Network Security Architecture | Om Bhanushali</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="cursor-dot"></div>
-    
+
+    <div class="spatial-ambient" aria-hidden="true">
+        <div class="ambient-orb orb-primary"></div>
+        <div class="ambient-orb orb-secondary"></div>
+    </div>
+
     <nav class="glass-nav">
-        <div class="nav-brand">Om Bhanushali</div>
+        <a href="index.html" class="nav-brand">Om Bhanushali</a>
         <div class="nav-links">
             <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
+            <a href="projects.html" class="active">PROJECTS</a>
             <a href="blogs.html">BLOGS</a>
-            <a href="op.html" class="active">OPERATIONS</a>
+            <a href="op.html">OPERATIONS</a>
         </div>
     </nav>
 
     <div class="container">
-        
-        <header class="hero text-center" data-aos="fade-down" style="padding-top: 40px;">
-            <h1 class="glitch" data-text="INTEGRATED ENTERPRISE NETWORK DESIGN" style="font-size: 2.5rem; margin-bottom: 10px;">INTEGRATED ENTERPRISE NETWORK DESIGN</h1>
-            <p class="cyber-subtitle" style="color: var(--accent-cyan); font-weight: bold;">🌐 CCE-1 Presentation • Computer Networks (CO1 & CO2)</p>
-            <p style="max-width: 800px; margin: 15px auto 2rem; color: var(--text-secondary); line-height: 1.6;">
-                Designing, analyzing, and demonstrating a practical, scalable, and secure network architecture tailored for modern enterprise environments.
+        <header class="hero text-center" data-aos="fade-down">
+            <h1 class="glitch" data-text="NETWORK ARCHITECTURE">NETWORK ARCHITECTURE</h1>
+            <p class="cyber-subtitle">
+                🛡️ Three-Tier Hierarchical Enterprise Network Security Design
             </p>
+            <p class="hero-description">
+                Designed a secure, scalable three-tier hierarchical network architecture for corporate environments implementing VLAN segmentation, secure routing protocols, and strict Access Control Lists (ACLs) to enforce traffic filtering.
+            </p>
+            <div class="hero-actions">
+                <a href="projects.html" class="btn btn-secondary">← BACK TO PROJECTS</a>
+                <a href="op.html#contact-form" class="btn btn-primary">DISCUSS ARCHITECTURE</a>
+            </div>
         </header>
 
-        <section id="problem-statement" class="glass-panel chamber" data-aos="fade-up" style="margin-bottom: 30px;">
-            <h2 class="neon-heading">1. PROBLEM STATEMENT & OBJECTIVES</h2>
-            
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px; margin-top: 20px;">The Engineering Challenge</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
-                Modern enterprises face immense challenges with legacy, fragmented network topologies. As organizations scale, flat networks lead to severe broadcast storms, bandwidth bottlenecks, and critical security vulnerabilities. The engineering problem is to design an integrated enterprise architecture that eliminates single points of failure, enforces strict access controls, and ensures high availability across all departments. This project requires designing, analyzing, and demonstrating a practical solution to address these enterprise challenges, focusing on performance, scalability, and security.
-            </p>
-
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Core Objectives</h3>
-            <ul style="list-style: none; color: var(--text-secondary); line-height: 2;">
-                <li><span style="color: var(--accent-cyan); margin-right: 10px;">></span> <strong>CO1:</strong> Demonstrate enterprise network topologies and OSI layer components through advanced simulation.</li>
-                <li><span style="color: var(--accent-cyan); margin-right: 10px;">></span> <strong>CO2:</strong> Analyze OSI layer functions in network communication to optimize data flow.</li>
-                <li><span style="color: var(--accent-cyan); margin-right: 10px;">></span> <strong>Security & Scalability:</strong> Implement VLAN segmentation, ACLs, and dynamic routing to secure the enterprise perimeter.</li>
-            </ul>
-        </section>
-
-        <section id="literature" class="glass-panel chamber" data-aos="fade-up" style="margin-bottom: 30px;">
-            <h2 class="neon-heading">2. LITERATURE & ENGINEERING ANALYSIS</h2>
-            
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px; margin-top: 20px;">Working Principle & Architecture</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
-                Integrated Enterprise Networks utilize the Cisco Hierarchical Model (Core, Distribution, and Access layers). This segregation ensures that high-speed routing occurs at the core, policy-based filtering (ACLs/Routing) at the distribution layer, and endpoint connectivity at the access layer via VLANs.
-            </p>
-
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Real-Time Industrial Applications</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
-                This architecture is the backbone of major Data Centers, Corporate Headquarters, and Financial Institutions (Banking). It ensures that a compromised workstation in the HR department cannot laterally pivot to the secure Finance or IT server subnets.
-            </p>
-        </section>
-
-        <section id="topology" class="glass-panel chamber" data-aos="fade-up" style="margin-bottom: 30px;">
-            <h2 class="neon-heading">3. NETWORK TOPOLOGY & DESIGN</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                The proposed solution features a hierarchical topology integrating routers, multi-layer switches, and end devices.
-            </p>
-            
-            <div style="text-align: center; margin: 2rem 0; padding: 20px; border: 1px dashed var(--accent-purple); background: rgba(153, 69, 255, 0.05); border-radius: 8px;">
-                <img src="Screenshot%202026-07-06%20141819.png" alt="Integrated Enterprise Network Topology" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--accent-purple); margin-bottom: 20px; box-shadow: 0 0 15px rgba(153, 69, 255, 0.2);">
-                <br>
-                <img src="Screenshot%202026-07-06%20133121.png" alt="Enterprise Network Design Core Technologies" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--accent-purple); box-shadow: 0 0 15px rgba(153, 69, 255, 0.2);">
+        <section class="glass-panel chamber" data-aos="fade-up">
+            <h2 class="neon-heading">ARCHITECTURAL OVERVIEW</h2>
+            <div class="spatial-grid" style="margin-bottom: 0;">
+                <div class="experience-item" style="margin-bottom: 0;">
+                    <span class="card-tag">TIER 1 — CORE & PERIMETER</span>
+                    <h3 class="role-title">High-Speed Backbone & Routing</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Redundant core routing layer enforcing perimeter security policies and deterministic packet forwarding between enterprise zones.
+                    </p>
+                </div>
+                <div class="experience-item" style="margin-bottom: 0;">
+                    <span class="card-tag">TIER 2 — DISTRIBUTION & ACLS</span>
+                    <h3 class="role-title">Policy Enforcement & Filtering</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Extended Access Control Lists (ACLs) and inter-VLAN routing rules isolating sensitive administrative and server subnets from unauthorized lateral movement.
+                    </p>
+                </div>
+                <div class="experience-item" style="margin-bottom: 0;">
+                    <span class="card-tag">TIER 3 — ACCESS LAYER</span>
+                    <h3 class="role-title">Departmental VLAN Isolation</h3>
+                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
+                        Logical segmentation across departmental endpoints using dedicated VLANs, port security, and broadcast domain containment.
+                    </p>
+                </div>
             </div>
         </section>
 
-        <section id="demonstration" class="glass-panel chamber" data-aos="fade-up" style="margin-bottom: 30px;">
-            <h2 class="neon-heading">4. PRACTICAL DEMONSTRATION & MEDIA</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">
-                Live demonstration of the proposed solution utilizing Cisco Packet Tracer and slide deck analysis.
+        <section class="glass-panel chamber" data-aos="fade-up">
+            <h2 class="neon-heading">TOPOLOGY, CONFIGURATION & VERIFICATION LOGS</h2>
+            <p class="section-text">
+                Implementation artifacts covering hierarchical topology design, VLAN & trunk configuration, routing tables, and ACL packet verification tests:
             </p>
-
-            <div style="margin: 2rem 0; text-align: center; padding: 2rem; border: 1px solid var(--accent-cyan); border-radius: 8px; background: rgba(0, 255, 255, 0.05);">
-                <h3 style="color: var(--accent-cyan); margin-bottom: 15px; font-size: 1.3rem;">PROJECT PRESENTATION</h3>
-                <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto 1.5rem; line-height: 1.5;">
-                    Access the complete enterprise architecture slide deck, covering the OSI layer analysis, Router-on-a-Stick methodology, and the physical/logical network topologies deployed.
-                </p>
-                <a href="https://drive.google.com/drive/folders/1xy1PMifaeQUNU9jmWk_l3Zlkbqe-5Wl3?usp=sharing" target="_blank" style="display: inline-block; padding: 10px 20px; border: 1px solid var(--accent-cyan); color: var(--accent-cyan); background: transparent; text-decoration: none; border-radius: 4px; font-weight: bold; letter-spacing: 1px;">
-                    VIEW SLIDE DECK (GOOGLE DRIVE)
-                </a>
-            </div>
-
-            <div style="text-align: center; margin: 2rem 0; padding: 20px; border: 1px dashed var(--accent-pink); background: rgba(255, 0, 110, 0.05); border-radius: 8px;">
-                <h3 style="color: var(--accent-pink); margin-bottom: 20px; font-size: 1.2rem; letter-spacing: 1px;">LIVE SIMULATION EVIDENCE</h3>
-                
-                <img src="Screenshot%202026-07-06%20133204.png" alt="Router CLI Configuration Proof" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--accent-pink); margin-bottom: 20px; box-shadow: 0 0 15px rgba(255, 0, 110, 0.2);">
-                <br>
-                <img src="Screenshot%202026-07-06%20132723.png" alt="Cross-VLAN ICMP Traffic Proof" style="max-width: 100%; border-radius: 8px; border: 1px solid var(--accent-pink); box-shadow: 0 0 15px rgba(255, 0, 110, 0.2);">
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-04 200656.png" alt="Enterprise Network Topology View 1" loading="lazy">
+                    <div class="gallery-caption">Three-Tier Network Topology & Subnet Layout</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-04 200710.png" alt="Enterprise Network Topology View 2" loading="lazy">
+                    <div class="gallery-caption">VLAN Segmentation & Distribution Layer Links</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 132723.png" alt="Routing and ACL Configuration" loading="lazy">
+                    <div class="gallery-caption">Router Interface & Secure Routing Configuration</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 133121.png" alt="Access Control List Policy Verification" loading="lazy">
+                    <div class="gallery-caption">Extended ACL Rules & Traffic Filtering Policies</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 133204.png" alt="Inter-VLAN Verification" loading="lazy">
+                    <div class="gallery-caption">Inter-VLAN Connectivity & Policy Verification</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="Screenshot 2026-07-06 141819.png" alt="End-to-End Packet Verification" loading="lazy">
+                    <div class="gallery-caption">End-to-End Segmentation & Telemetry Validation</div>
+                </div>
             </div>
         </section>
-
-        <section id="sdg-mapping" class="glass-panel chamber" data-aos="fade-up" style="margin-bottom: 40px;">
-            <h2 class="neon-heading">5. SDG MAPPING & CONCLUSION</h2>
-            
-            <h3 style="color: var(--accent-cyan); margin-bottom: 10px; margin-top: 20px;">Sustainable Development Goal (SDG) 4</h3>
-            <p style="color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">
-                This project directly supports <strong>SDG 4: Quality Education</strong>. By designing and analyzing a practical enterprise network solution, this exercise promotes technical education through hands-on networking skills. Bridging the gap between theoretical models and physical network implementation ensures the development of highly skilled engineers.
-            </p>
-
-            <h3 style="color: var(--accent-purple); margin-bottom: 10px;">Conclusion</h3>
-            <p style="color: var(--text-secondary); line-height: 1.6;">
-                The integrated enterprise network design successfully addresses the core engineering problems of scalability, security, and performance. By leveraging a hierarchical approach, VLAN segmentation, and dynamic routing, the architecture ensures resilient data flow and robust defense against network threats.
-            </p>
-        </section>
-
     </div>
 
-    <footer class="glass-footer" style="text-align: center; padding: 40px 20px; margin-top: 40px;">
-        <p style="font-weight: bold; color: var(--accent-cyan);">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <div style="margin: 20px 0;">
-            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">LinkedIn</a>
-            <a href="https://www.youtube.com/@TSNINJA20" target="_blank" style="color: var(--text-secondary); margin: 0 10px; text-decoration: none;">YouTube</a>
+    <footer class="glass-footer">
+        <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
+        <p class="footer-label">CONNECT</p>
+        <div class="footer-links">
+            <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
+            <a href="tel:+918879291949">+91 8879291949</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="op.html">OPERATIONS</a>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.8rem;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 900, once: true });
 
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
-                dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+                dot.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
             });
         }
+
+        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
+        spatialElements.forEach((el) => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3.5;
+                const rotateY = ((x - centerX) / centerX) * 3.5;
+
+                el.style.transition = 'transform 0.08s ease-out';
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+                el.style.setProperty('--mouse-x', `${x}px`);
+                el.style.setProperty('--mouse-y', `${y}px`);
+            });
+
+            el.addEventListener('mouseleave', () => {
+                el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
+                el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        });
     </script>
 </body>
 </html>
