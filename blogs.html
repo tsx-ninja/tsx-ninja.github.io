@@ -3,15 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Field Manuals & Media | Om Bhanushali</title>
-    <link rel="stylesheet" href="style.css?v=34">
+    <meta name="description" content="Technical Writeups & Triage Insights | Om Bhanushali">
+    <title>Blogs | Om Bhanushali</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="cursor-dot"></div>
 
+    <div class="spatial-ambient" aria-hidden="true">
+        <div class="ambient-orb orb-primary"></div>
+        <div class="ambient-orb orb-secondary"></div>
+    </div>
+
     <nav class="glass-nav">
-        <div class="nav-brand">Om Bhanushali</div>
+        <a href="index.html" class="nav-brand">Om Bhanushali</a>
         <div class="nav-links">
             <a href="index.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
@@ -21,80 +30,119 @@
     </nav>
 
     <div class="container">
-        <header class="hero glass-panel text-center" data-aos="fade-down" style="min-height: auto; padding: 40px;">
-            <h1 class="neon-heading">FIELD MANUALS & MEDIA</h1>
-            <p class="cyber-subtitle">📝 Write-ups & POC's</p>
-            <p>A repository of my vulnerability research, methodology deep-dives, and custom automation workflows. Documenting the attack paths to help the community build stronger defenses.</p>
+        <header class="hero text-center" data-aos="fade-down">
+            <h1 class="glitch" data-text="TECHNICAL WRITEUPS">TECHNICAL WRITEUPS</h1>
+            <p class="cyber-subtitle">
+                📡 Vulnerability Triage • Penetration Testing • Bug Bounty Case Studies
+            </p>
+            <p class="hero-description">
+                Insights from triaging external vulnerability reports, conducting red team assessments, and responsibly disclosing critical flaws across 150+ organizations.
+            </p>
         </header>
 
-        <h2 class="neon-heading" style="margin-top: 40px;" data-aos="fade-right">MEDIUM WRITE-UPS</h2>
-        <div class="services-grid">
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-cyan); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">💰</div>
-                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">$750 From My First IDOR</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">The $750 IDOR Story: From Recon to Reward. Securing critical business logic flaws.</p>
-                <a href="https://medium.com/bugbountywriteup/this-is-how-i-got-750-from-my-first-idor-8058061c65ba" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">ACCESS WRITEUP</a>
-            </div>
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="200" style="border-color: var(--accent-cyan); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">🔓</div>
-                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">2FA Bypass via Request Flaw</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Always test for everything! A deep dive into bypassing Two-Factor Authentication mechanisms.</p>
-                <a href="https://medium.com/bugbountywriteup/2fa-bypass-via-request-handling-flaw-e4cf21bb4c55" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">ACCESS WRITEUP</a>
-            </div>
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="300" style="border-color: var(--accent-cyan); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">👑</div>
-                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Admin Panel Takeover</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">How I used only 2 tools to achieve a full admin panel takeover and secure the bounty.</p>
-                <a href="https://medium.com/the-first-digit/easiest-admin-panel-takeover-d9e2c5ef321e" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">ACCESS WRITEUP</a>
-            </div>
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="400" style="border-color: var(--accent-cyan); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">🧠</div>
-                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Business Logic Flaw</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">An overlooked flaw allowing subscriber count manipulation on a real-world platform.</p>
-                <a href="https://medium.com/bugbountywriteup/business-logic-flaw-that-no-one-knows-about-836859be1471" target="_blank" class="btn" style="padding: 0.5rem 1.5rem; font-size: 0.8rem;">ACCESS WRITEUP</a>
-            </div>
-        </div>
+        <div class="spatial-grid-2" data-aos="fade-up">
+            <article class="spatial-card">
+                <div>
+                    <span class="card-tag">VULNERABILITY TRIAGE & MANAGEMENT</span>
+                    <h2 class="card-title">Inside the Triage Queue: Validating Bug Reports & Scoring with CVSS v3.1/v4.0</h2>
+                    <p class="card-desc">
+                        How a Vulnerability Triage Analyst reproduces complex submissions, filters out false positives, assigns accurate CVSS severity vectors, and tracks engineering remediation in Atlassian Jira.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">CVSS v3.1/v4.0 • Atlassian Jira</span>
+                    <span class="spatial-pill">Triage Analyst</span>
+                </div>
+            </article>
 
-        <h2 class="neon-heading" style="margin-top: 60px;" data-aos="fade-right"> POC ViDEOS (YOUTUBE)</h2>
-        <div class="services-grid">
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="100" style="border-color: var(--accent-pink); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">🔗</div>
-                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">Broken Link Hijacking</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Easy $$$ Bounty within seconds. Live bug bounty hunting demonstration.</p>
-                <a href="https://www.youtube.com/watch?v=okxkN3tUmmw" target="_blank" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(255, 0, 110, 0.1); padding: 0.5rem 1.5rem; font-size: 0.8rem;">PLAY VIDEO</a>
-            </div>
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="200" style="border-color: var(--accent-pink); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">💸</div>
-                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">$1000 Business Logic Flaw</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Deep dive into a highly lucrative business logic vulnerability discovered in the wild.</p>
-                <a href="https://youtu.be/qaHcAsal7j8?si=wB2MOt0AiIywIKjk" target="_blank" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(255, 0, 110, 0.1); padding: 0.5rem 1.5rem; font-size: 0.8rem;">PLAY VIDEO</a>
-            </div>
-            <div class="service-card glass-panel" data-aos="fade-up" data-aos-delay="300" style="border-color: var(--accent-pink); text-align: center;">
-                <div style="font-size: 2.5rem; margin-bottom: 15px;">⏱️</div>
-                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">$200 Rate Limit Bypass</h3>
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Live Bug Bounty Hunting showing exactly how to bypass rate limit restrictions.</p>
-                <a href="https://youtu.be/NAPdFlEgPbQ?si=MLA-iZS0IcVwmxfB" target="_blank" class="btn" style="border-color: var(--accent-pink); color: var(--accent-pink); background: rgba(255, 0, 110, 0.1); padding: 0.5rem 1.5rem; font-size: 0.8rem;">PLAY VIDEO</a>
-            </div>
+            <article class="spatial-card">
+                <div>
+                    <span class="card-tag">BUG BOUNTY & WEB APPSEC</span>
+                    <h2 class="card-title">Escalating Broken Access Controls & Business Logic Flaws to Account Takeover</h2>
+                    <p class="card-desc">
+                        Lessons from securing 150+ organizations: combining manual asset discovery with deep endpoint analysis to uncover critical authentication and authorization bypasses.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">OWASP Top 10 • API Security</span>
+                    <span class="spatial-pill">Bug Bounty</span>
+                </div>
+            </article>
+
+            <article class="spatial-card">
+                <div>
+                    <span class="card-tag">MOBILE PENETRATION TESTING</span>
+                    <h2 class="card-title">Dynamic Mobile Instrumentation with Frida & MobSF Under OWASP MASVS</h2>
+                    <p class="card-desc">
+                        Practical methodology for analyzing Android and iOS binaries, bypassing runtime protections with Frida hooks, and uncovering insecure credential storage.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">eMAPT • OWASP MASVS</span>
+                    <span class="spatial-pill">Frida & MobSF</span>
+                </div>
+            </article>
+
+            <article class="spatial-card">
+                <div>
+                    <span class="card-tag">OFFENSIVE PYTHON AUTOMATION</span>
+                    <h2 class="card-title">Building ReconX: Automating Endpoint Extraction & Archive Secret Scanning</h2>
+                    <p class="card-desc">
+                        How custom Python pipelines accelerate reconnaissance by chaining subdomain discovery with automated JavaScript and <code>.zip</code> archive parsing for exposed API keys.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">Python • ReconX</span>
+                    <a href="projects.html" class="btn btn-secondary" style="padding: 7px 16px; font-size: 0.76rem;">VIEW PROJECT</a>
+                </div>
+            </article>
         </div>
     </div>
 
-    <footer class="glass-footer" style="margin-top: 40px;">
-        <p>⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">SOCIAL</p>
+    <footer class="glass-footer">
+        <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
+        <p class="footer-label">CONNECT</p>
         <div class="footer-links">
-            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank">LinkedIn</a>
-            <a href="https://www.youtube.com/@TSNINJA20" target="_blank">YouTube</a>
-            <a href="mailto:ombhanushali81@rediffmail.com">Email</a>
+            <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
+            <a href="tel:+918879291949">+91 8879291949</a>
+            <a href="index.html">HOME</a>
+            <a href="op.html">OPERATIONS</a>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.75rem; margin-top: 2.5rem; letter-spacing: 1px;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 900, once: true });
+
         const dot = document.querySelector('.cursor-dot');
-        window.addEventListener('mousemove', (e) => {
-            dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+        if (dot) {
+            window.addEventListener('mousemove', (e) => {
+                dot.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
+            });
+        }
+
+        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
+        spatialElements.forEach((el) => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3.5;
+                const rotateY = ((x - centerX) / centerX) * 3.5;
+
+                el.style.transition = 'transform 0.08s ease-out';
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+                el.style.setProperty('--mouse-x', `${x}px`);
+                el.style.setProperty('--mouse-y', `${y}px`);
+            });
+
+            el.addEventListener('mouseleave', () => {
+                el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
+                el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
         });
     </script>
 </body>
