@@ -1,27 +1,33 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Fixed Navbar Monogram Edition)
+   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Dark/Light Mode)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
 :root {
-    --bg-canvas: #020205;
-    --glass-surface: rgba(10, 14, 26, 0.65);
-    --glass-surface-hover: rgba(18, 24, 42, 0.78);
-    --glass-pill: rgba(255, 255, 255, 0.05);
+    --bg-canvas: #06080d;
+    --glass-surface: rgba(255, 255, 255, 0.045);
+    --glass-surface-hover: rgba(255, 255, 255, 0.075);
+    --glass-pill: rgba(255, 255, 255, 0.06);
     --glass-border: rgba(255, 255, 255, 0.12);
     --glass-border-strong: rgba(255, 255, 255, 0.24);
-    --specular-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.3);
+    --specular-top: inset 0 1px 0 0 rgba(255, 255, 255, 0.28);
     --specular-subtle: inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
-    --spatial-shadow: 0 32px 64px -16px rgba(0, 0, 0, 0.85), 0 4px 20px rgba(0, 0, 0, 0.5);
-    --spatial-shadow-hover: 0 40px 80px -16px rgba(0, 0, 0, 0.95), 0 8px 30px rgba(0, 0, 0, 0.7);
+    --spatial-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.65), 0 4px 16px rgba(0, 0, 0, 0.4);
+    --spatial-shadow-hover: 0 32px 64px -12px rgba(0, 0, 0, 0.78), 0 8px 24px rgba(0, 0, 0, 0.5);
 
     --text-primary: #f8fafc;
-    --text-secondary: rgba(226, 232, 240, 0.76);
+    --text-secondary: rgba(226, 232, 240, 0.74);
     --text-muted: rgba(148, 163, 184, 0.68);
-    --ton-core: #c084fc;
-    --space-bg-opacity: 0.75;
+    --accent-core: #c084fc;
+
+    --spatial-blur: blur(32px) saturate(180%);
+    --radius-chamber: 28px;
+    --radius-card: 22px;
+    --radius-pill: 9999px;
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Light Mode Overrides */
 [data-theme="light"] {
     --bg-canvas: #f1f5f9;
     --glass-surface: rgba(255, 255, 255, 0.75);
@@ -37,8 +43,7 @@
     --text-primary: #0f172a;
     --text-secondary: rgba(51, 65, 85, 0.82);
     --text-muted: rgba(100, 116, 139, 0.75);
-    --ton-core: #7c3aed;
-    --space-bg-opacity: 0.04;
+    --accent-core: #7c3aed;
 }
 
 *, *::before, *::after {
@@ -69,54 +74,36 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Centered TON 618 Quasar Atmospheric Background */
 .spatial-ambient {
     position: fixed;
     inset: 0;
     pointer-events: none;
     z-index: -1;
     overflow: hidden;
-    background: radial-gradient(circle at 50% 30%, #0d061f 0%, #020205 75%);
-    opacity: var(--space-bg-opacity);
-    transition: opacity 0.3s ease;
 }
 
-.black-hole-core {
+.ambient-orb {
     position: absolute;
-    top: 32vh;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 240px;
-    height: 240px;
-    background: #000000;
     border-radius: 50%;
-    box-shadow: 
-        0 0 90px 30px rgba(192, 132, 252, 0.25),
-        0 0 160px 70px rgba(56, 189, 248, 0.15),
-        inset 0 0 40px 12px rgba(15, 8, 30, 0.95);
-    opacity: 0.85;
-    z-index: -2;
-    animation: ton-pulsate 10s ease-in-out infinite alternate;
+    filter: blur(95px);
+    opacity: 0.32;
 }
 
-.accretion-disk {
-    position: absolute;
-    top: 32vh;
+.orb-primary {
+    width: 540px;
+    height: 540px;
+    background: radial-gradient(circle, rgba(226, 232, 240, 0.2), transparent 70%);
+    top: -140px;
     left: 50%;
-    transform: translate(-50%, -50%) rotateX(72deg);
-    width: 640px;
-    height: 240px;
-    background: radial-gradient(ellipse, rgba(192, 132, 252, 0.4) 0%, rgba(56, 189, 248, 0.24) 45%, transparent 72%);
-    border-radius: 50%;
-    filter: blur(24px);
-    z-index: -3;
-    pointer-events: none;
-    opacity: 0.8;
+    transform: translateX(-50%);
 }
 
-@keyframes ton-pulsate {
-    0% { transform: translate(-50%, -50%) scale(0.97); }
-    100% { transform: translate(-50%, -50%) scale(1.03); }
+.orb-secondary {
+    width: 460px;
+    height: 460px;
+    background: radial-gradient(circle, rgba(148, 163, 184, 0.16), transparent 70%);
+    bottom: 8%;
+    right: -120px;
 }
 
 /* Custom Cursor */
@@ -127,11 +114,11 @@ body {
     width: 12px;
     height: 12px;
     background: rgba(255, 255, 255, 0.95);
-    border: 1.5px solid rgba(192, 132, 252, 0.65);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
-    box-shadow: 0 0 20px rgba(192, 132, 252, 0.75), 0 0 6px rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.65), 0 0 4px rgba(255, 255, 255, 0.95);
     will-change: transform;
 }
 
@@ -140,19 +127,19 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 1px solid rgba(192, 132, 252, 0.28);
-    background: rgba(192, 132, 252, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.04);
 }
 
 @media (hover: none), (pointer: coarse) {
     .cursor-dot { display: none !important; }
 }
 
-/* Floating Navigation */
+/* Floating Navigation with OB Monogram */
 .glass-nav {
     position: sticky;
     top: 20px;
@@ -183,7 +170,6 @@ body {
     text-decoration: none;
 }
 
-/* Clean Small Navbar Logo Badge */
 .nav-logo-icon {
     width: 32px;
     height: 32px;
@@ -195,7 +181,7 @@ body {
     border-radius: 50%;
     font-weight: 800;
     font-size: 0.75rem;
-    color: var(--ton-core);
+    color: var(--accent-core);
     box-shadow: 0 0 10px rgba(192, 132, 252, 0.3);
 }
 
@@ -270,7 +256,7 @@ body {
 .text-center { text-align: center; }
 
 .hero {
-    padding: 60px 20px 44px;
+    padding: 64px 20px 40px;
     margin-bottom: 24px;
 }
 
@@ -282,19 +268,18 @@ body {
     background: linear-gradient(180deg, var(--text-primary) 0%, var(--text-secondary) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
 }
 
 .cyber-subtitle {
     display: inline-block;
     color: var(--text-primary);
-    font-size: 0.86rem;
+    font-size: 0.88rem;
     font-weight: 500;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     padding: 7px 18px;
     margin-bottom: 20px;
-    background: var(--glass-surface);
-    backdrop-filter: var(--spatial-blur);
+    background: var(--glass-pill);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-pill);
     box-shadow: var(--specular-subtle);
@@ -305,7 +290,7 @@ body {
     margin: 0 auto 30px;
     color: var(--text-secondary);
     font-size: 1.03rem;
-    line-height: 1.75;
+    line-height: 1.7;
 }
 
 .hero-actions {
@@ -330,7 +315,7 @@ body {
     border: 1px solid var(--glass-border-strong) !important;
     background: var(--glass-surface) !important;
     color: var(--text-primary) !important;
-    box-shadow: var(--specular-top), 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: var(--specular-top), 0 8px 20px rgba(0, 0, 0, 0.35);
     transition: transform 0.25s var(--transition-smooth), background 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -348,10 +333,10 @@ body {
 .btn:hover {
     transform: translateY(-2px) scale(1.015);
     background: rgba(192, 132, 252, 0.28) !important;
-    box-shadow: var(--specular-top), 0 14px 28px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--specular-top), 0 14px 28px rgba(0, 0, 0, 0.45);
 }
 
-/* Glass Chambers */
+/* 3D Perspective Glass Panels */
 .glass-panel, .chamber, .spatial-card {
     position: relative;
     overflow: hidden;
@@ -361,7 +346,7 @@ body {
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-chamber);
     box-shadow: var(--specular-top), var(--spatial-shadow);
-    padding: 38px 42px;
+    padding: 36px 40px;
     margin-bottom: 28px;
     transform-style: preserve-3d;
     will-change: transform;
@@ -376,7 +361,7 @@ body {
     background: radial-gradient(
         600px circle at var(--mouse-x, 50%) var(--mouse-y, -200px),
         rgba(192, 132, 252, 0.12),
-        transparent 45%
+        transparent 42%
     );
     opacity: 0;
     transition: opacity 0.35s ease;
@@ -421,7 +406,7 @@ body {
 .section-text {
     color: var(--text-secondary);
     font-size: 1rem;
-    line-height: 1.78;
+    line-height: 1.75;
     margin-bottom: 14px;
 }
 
@@ -481,7 +466,7 @@ body {
     margin-bottom: 8px;
 }
 
-.list-indicator { color: var(--ton-core); font-weight: 700; }
+.list-indicator { color: var(--text-primary); font-weight: 600; opacity: 0.65; }
 
 .expertise-grid {
     display: flex;
@@ -507,6 +492,44 @@ body {
     background: rgba(192, 132, 252, 0.18);
     border-color: rgba(192, 132, 252, 0.45);
     transform: translateY(-2px);
+}
+
+.spatial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.spatial-card {
+    padding: 28px 30px;
+    border-radius: var(--radius-card);
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-tag {
+    display: inline-block;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.card-title {
+    font-size: 1.22rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 10px;
+}
+
+.card-desc {
+    color: var(--text-secondary);
+    font-size: 0.94rem;
+    line-height: 1.68;
 }
 
 /* Floating Social Media Dock */
@@ -563,7 +586,7 @@ body {
 /* Footer */
 .glass-footer {
     text-align: center;
-    padding: 48px 20px 60px;
+    padding: 44px 20px 56px;
     margin-top: 52px;
     border-top: 1px solid var(--glass-border);
     background: var(--glass-surface);
@@ -586,7 +609,5 @@ body {
 @media (max-width: 720px) {
     .glass-nav { margin: 12px 16px 0; flex-direction: column; gap: 10px; }
     .glass-panel, .chamber, .spatial-card { padding: 26px 22px; }
-    .black-hole-core { width: 140px; height: 140px; top: 22vh; }
-    .accretion-disk { width: 320px; height: 130px; top: 22vh; }
     .glass-social-dock { flex-wrap: wrap; max-width: 320px; }
 }
