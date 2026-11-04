@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Projects & Certifications | Om Bhanushali — Penetration Tester & Vulnerability Triage Analyst">
-    <title>Projects | Om Bhanushali</title>
+    <meta name="description" content="Offensive Tooling, Network Architecture & Certifications | Om Bhanushali">
+    <title>Telemetry & Projects | Om Bhanushali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,103 +15,95 @@
     <div class="cursor-dot"></div>
 
     <div class="spatial-ambient" aria-hidden="true">
+        <div class="ambient-mesh-grid"></div>
         <div class="ambient-orb orb-primary"></div>
         <div class="ambient-orb orb-secondary"></div>
     </div>
 
     <nav class="glass-nav">
-        <a href="index.html" class="nav-brand">Om Bhanushali</a>
+        <a href="index.html" class="nav-brand">
+            <span class="status-indicator"></span> OM.BHANUSHALI // SEC-OPS
+        </a>
         <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="projects.html" class="active">PROJECTS</a>
-            <a href="blogs.html">BLOGS</a>
+            <a href="index.html">COMMAND</a>
+            <a href="projects.html" class="active">TELEMETRY</a>
+            <a href="blogs.html">RESEARCH</a>
             <a href="op.html">OPERATIONS</a>
         </div>
     </nav>
 
     <div class="container">
         <header class="hero text-center" data-aos="fade-down">
-            <h1 class="glitch" data-text="PROJECTS & CREDENTIALS">PROJECTS & CREDENTIALS</h1>
+            <div class="hero-badge">
+                <span>⚡ ARTIFACTS & TOOLING REPOSITORY</span>
+            </div>
+            <h1 class="glitch" data-text="SECURITY TELEMETRY">SECURITY TELEMETRY</h1>
             <p class="cyber-subtitle">
-                🛠️ Offensive Automation • Enterprise Network Security • Certifications
+                OFFENSIVE AUTOMATION • ENTERPRISE ARCHITECTURE • VERIFIED CREDENTIALS
             </p>
             <p class="hero-description">
-                Proprietary reconnaissance automation tooling, hierarchical enterprise network defense architecture, and verified offensive security credentials.
+                Proprietary vulnerability reconnaissance pipelines, hierarchical network security designs, and industry-accredited offensive certifications.
             </p>
         </header>
 
-        <div class="spatial-grid-2" data-aos="fade-up">
+        <div class="bento-grid" data-aos="fade-up">
             <!-- Project 1: ReconX -->
-            <article class="spatial-card">
-                <div>
-                    <div class="card-icon">⚡</div>
-                    <span class="card-tag">PROPRIETARY OFFENSIVE AUTOMATION</span>
-                    <h2 class="card-title">ReconX — Automated Reconnaissance Framework</h2>
-                    <p class="card-desc">
-                        Designed and developed a proprietary Python-based automation tool deployed internally to streamline and accelerate offensive security workflows.
-                    </p>
-                    <ul class="spatial-list" style="margin-bottom: 20px;">
-                        <li><span class="list-indicator">›</span> Engineered a multi-stage scanning pipeline that automatically executes subdomain enumeration, live asset discovery, and comprehensive endpoint extraction.</li>
-                        <li><span class="list-indicator">›</span> Implemented automated parsing modules to scan JavaScript files and compressed archives (<code>.zip</code>), proactively identifying hardcoded API keys, exposed credentials, and sensitive configurations.</li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <div class="expertise-grid" style="margin-top: 0;">
-                        <span class="spatial-pill">Python</span>
-                        <span class="spatial-pill">Subdomain & Asset Recon</span>
-                        <span class="spatial-pill">JS & .zip Secret Scanner</span>
-                    </div>
+            <article class="spatial-card bento-main">
+                <span class="card-tag">PROPRIETARY RECONNAISSANCE FRAMEWORK</span>
+                <h2 class="card-title">ReconX — Automated Attack Surface Mapper</h2>
+                <p class="card-desc">
+                    Engineered and deployed internally to accelerate offensive security testing workflows and asset discovery.
+                </p>
+                <ul class="spatial-list" style="margin-bottom: 20px;">
+                    <li><span class="list-indicator">›</span> Automated multi-stage pipeline executing subdomain enumeration, live HTTP probing, and deep endpoint extraction.</li>
+                    <li><span class="list-indicator">›</span> Advanced parsing modules scanning JavaScript bundles and archive files (<code>.zip</code>) to flag exposed API keys and credentials.</li>
+                </ul>
+                <div class="expertise-grid" style="margin-top: 10px;">
+                    <span class="spatial-pill">Python Automation</span>
+                    <span class="spatial-pill">Subdomain Enumeration</span>
+                    <span class="spatial-pill">Secret Extraction</span>
                 </div>
             </article>
 
-            <!-- Project 2: Enterprise Network Security Architecture -->
-            <article class="spatial-card">
+            <!-- Project 2: Network Architecture -->
+            <article class="spatial-card bento-side" style="display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div class="card-icon">🛡️</div>
-                    <span class="card-tag">ENTERPRISE NETWORK SECURITY</span>
-                    <h2 class="card-title">Enterprise Network Security Architecture</h2>
-                    <p class="card-desc">
-                        Designed a secure, scalable three-tier hierarchical network architecture for corporate environments.
+                    <span class="card-tag">ENTERPRISE DEFENSE</span>
+                    <h2 class="card-title" style="font-size: 1.15rem;">Three-Tier Network Security</h2>
+                    <p class="card-desc" style="font-size: 0.9rem;">
+                        Scalable hierarchical architecture enforcing strict VLAN segmentation and Access Control Lists (ACLs).
                     </p>
-                    <ul class="spatial-list" style="margin-bottom: 20px;">
-                        <li><span class="list-indicator">›</span> Implemented segmentations using VLANs, secure routing protocols, and strict Access Control Lists (ACLs) to enforce traffic filtering.</li>
-                        <li><span class="list-indicator">›</span> Verified inter-VLAN isolation, routing tables, and perimeter security controls across core, distribution, and access tiers.</li>
-                    </ul>
                 </div>
-                <div class="card-footer">
-                    <span class="company-badge">VLANs • Secure Routing • ACLs</span>
-                    <a href="cce1.html" class="btn btn-primary" style="padding: 9px 20px; font-size: 0.78rem;">VIEW PROJECT →</a>
+                <div style="margin-top: auto; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <a href="cce1.html" class="btn btn-primary" style="width: 100%; font-size: 0.78rem; padding: 10px;">VIEW TOPOLOGY →</a>
                 </div>
             </article>
         </div>
 
         <section class="glass-panel chamber" data-aos="fade-up">
-            <h2 class="neon-heading">CERTIFICATIONS</h2>
-            <div class="cert-showcase" style="margin-bottom: 24px;">
-                <img src="emapt.png" alt="eMAPT Certification - Om Bhanushali" class="cert-image">
+            <h2 class="neon-heading">ACCREDITED CERTIFICATIONS</h2>
+            
+            <div class="cert-showcase" style="display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-bottom: 24px;">
+                <img src="emapt.png" alt="eMAPT Certification - Om Bhanushali" style="width: 170px; border-radius: 14px; border: 1px solid var(--glass-border-strong);">
                 <div style="flex: 1; min-width: 240px;">
                     <span class="card-tag">INE SECURITY</span>
-                    <h3 class="card-title">eMAPT — Mobile Application Penetration Tester</h3>
-                    <p class="section-text">
-                        Validates practical expertise in Android and iOS mobile application security assessment, reverse engineering, dynamic instrumentation with Frida, MobSF analysis, and OWASP MASVS testing.
+                    <h3 class="card-title" style="margin-bottom: 8px;">eMAPT — Mobile Application Penetration Tester</h3>
+                    <p class="section-text" style="font-size: 0.95rem; margin-bottom: 0;">
+                        Validates practical competency in Android & iOS security analysis, reverse engineering, dynamic instrumentation with Frida, and MobSF inspection mapped to OWASP MASVS guidelines.
                     </p>
                 </div>
             </div>
 
-            <div class="spatial-grid" style="margin-bottom: 0;">
+            <div class="spatial-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px;">
                 <div class="experience-item" style="margin-bottom: 0;">
                     <span class="card-tag">EC-COUNCIL</span>
-                    <h3 class="role-title">Certified Ethical Hacker V13 (CEH V13)</h3>
-                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
-                        End-to-end attack lifecycle proficiency across web applications, APIs, infrastructure reconnaissance, vulnerability assessment, and exploitation.
-                    </p>
+                    <h3 class="role-title" style="font-size: 1.05rem; margin-top: 4px;">Certified Ethical Hacker V13 (CEH V13)</h3>
+                    <p class="section-text" style="font-size: 0.88rem; margin-top: 6px; margin-bottom: 0;">Comprehensive proficiency in threat vector identification, scanning methodologies, and web/infrastructure exploitation.</p>
                 </div>
                 <div class="experience-item" style="margin-bottom: 0;">
-                    <span class="card-tag">CISCO</span>
-                    <h3 class="role-title">CCNA — Introduction to Networks</h3>
-                    <p class="section-text" style="font-size: 0.92rem; margin-top: 8px;">
-                        Enterprise network switching, routing fundamentals, IPv4/IPv6 addressing, VLAN segmentation, and access control implementation.
-                    </p>
+                    <span class="card-tag">CISCO NETWORKING ACADEMY</span>
+                    <h3 class="role-title" style="font-size: 1.05rem; margin-top: 4px;">CCNA — Introduction to Networks</h3>
+                    <p class="section-text" style="font-size: 0.88rem; margin-top: 6px; margin-bottom: 0;">Foundational mastery of switching protocols, IPv4/IPv6 subnets, VLAN tagging, and router security configurations.</p>
                 </div>
             </div>
         </section>
@@ -119,11 +111,11 @@
 
     <footer class="glass-footer">
         <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p class="footer-label">CONNECT</p>
+        <p class="footer-label">CHANNELS</p>
         <div class="footer-links">
             <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
             <a href="tel:+918879291949">+91 8879291949</a>
-            <a href="index.html">HOME</a>
+            <a href="index.html">COMMAND</a>
             <a href="op.html">OPERATIONS</a>
         </div>
         <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
@@ -132,31 +124,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
-
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
-                dot.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
+                dot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
             });
         }
-
-        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
-        spatialElements.forEach((el) => {
+        document.querySelectorAll('.glass-panel, .spatial-card').forEach((el) => {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -3.5;
-                const rotateY = ((x - centerX) / centerX) * 3.5;
-
                 el.style.transition = 'transform 0.08s ease-out';
-                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+                el.style.transform = `perspective(1000px) rotateX(${(((y - rect.height/2)/(rect.height/2)) * -3).toFixed(2)}deg) rotateY(${(((x - rect.width/2)/(rect.width/2)) * 3).toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
                 el.style.setProperty('--mouse-y', `${y}px`);
             });
-
             el.addEventListener('mouseleave', () => {
                 el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
                 el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
