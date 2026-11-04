@@ -161,8 +161,13 @@
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3;
+                const rotateY = ((x - centerX) / centerX) * 3;
+
                 el.style.transition = 'transform 0.08s ease-out';
-                el.style.transform = `perspective(1000px) rotateX(${(((y - rect.height/2)/(rect.height/2)) * -3).toFixed(2)}deg) rotateY(${(((x - rect.width/2)/(rect.width/2)) * 3).toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
                 el.style.setProperty('--mouse-y', `${y}px`);
             });
