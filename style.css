@@ -65,7 +65,6 @@ body {
     background: radial-gradient(circle at 50% 35%, #060b19 0%, #020408 75%);
 }
 
-/* Central Black Hole Event Horizon & Accretion Disk Simulation */
 .black-hole-core {
     position: absolute;
     top: 25%;
@@ -204,25 +203,51 @@ body {
 .text-center { text-align: center; }
 
 .hero {
-    padding: 72px 20px 48px;
-    margin-bottom: 28px;
+    padding: 54px 20px 40px;
+    margin-bottom: 24px;
 }
 
-.glitch {
-    font-size: clamp(2.4rem, 5vw, 3.6rem);
+/* Hacker / Cyber Logo Emblem */
+.hero-emblem-wrapper {
+    position: relative;
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+}
+
+.hero-emblem {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(56, 189, 248, 0.25), rgba(8, 13, 24, 0.9));
+    border: 1.5px solid rgba(56, 189, 248, 0.4);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6), inset 0 2px 6px rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: var(--spatial-blur);
+}
+
+.hero-emblem svg {
+    width: 48px;
+    height: 48px;
+    fill: #38bdf8;
+    filter: drop-shadow(0 0 8px rgba(56, 189, 248, 0.5));
+}
+
+.hero-title-clean {
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
     font-weight: 700;
-    letter-spacing: -0.03em;
-    margin-bottom: 14px;
-    background: linear-gradient(180deg, #ffffff 0%, rgba(226, 232, 240, 0.78) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: #ffffff;
+    text-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .cyber-subtitle {
     display: inline-block;
     color: var(--text-primary);
-    font-size: 0.88rem;
+    font-size: 0.86rem;
     font-weight: 500;
     letter-spacing: 0.03em;
     padding: 7px 18px;
@@ -285,7 +310,7 @@ body {
     box-shadow: var(--specular-top), 0 14px 28px rgba(0, 0, 0, 0.45);
 }
 
-/* 3D Perspective Floating Glass Chambers */
+/* Glass Chambers */
 .glass-panel, .chamber, .spatial-card {
     position: relative;
     overflow: hidden;
@@ -417,7 +442,6 @@ body {
 
 .list-indicator { color: var(--space-glow); font-weight: 700; }
 
-/* Pills & Grid */
 .expertise-grid {
     display: flex;
     flex-wrap: wrap;
@@ -444,6 +468,57 @@ body {
     transform: translateY(-2px);
 }
 
+/* Floating Social Media Dock (Inspired by Adharv K T Portfolio) */
+.glass-social-dock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0 16px;
+    padding: 10px 20px;
+    background: rgba(10, 15, 28, 0.75);
+    backdrop-filter: var(--spatial-blur);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--specular-subtle), 0 12px 32px rgba(0, 0, 0, 0.5);
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-icon-btn {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: all 0.25s var(--transition-smooth);
+}
+
+.social-icon-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+    transition: transform 0.25s ease;
+}
+
+.social-icon-btn:hover {
+    background: rgba(56, 189, 248, 0.2);
+    border-color: rgba(56, 189, 248, 0.5);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.3);
+}
+
+.social-icon-btn:hover svg {
+    transform: scale(1.12);
+}
+
 /* Footer */
 .glass-footer {
     text-align: center;
@@ -461,40 +536,10 @@ body {
     color: var(--text-primary);
 }
 
-.footer-label {
-    color: var(--text-muted);
-    font-size: 0.72rem;
-    letter-spacing: 0.16em;
-    margin: 18px 0 12px;
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin: 14px 0 24px;
-}
-
-.footer-links a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.82rem;
-    font-weight: 500;
-    letter-spacing: 0.05em;
-    padding: 6px 14px;
-    border-radius: var(--radius-pill);
-    transition: color 0.2s ease, background 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: var(--text-primary);
-    background: rgba(255, 255, 255, 0.08);
-}
-
 .footer-copy {
     color: var(--text-muted);
     font-size: 0.8rem;
+    margin-top: 12px;
 }
 
 @media (max-width: 720px) {
@@ -502,4 +547,5 @@ body {
     .glass-panel, .chamber, .spatial-card { padding: 26px 22px; }
     .black-hole-core { width: 220px; height: 220px; }
     .accretion-disk { width: 420px; height: 180px; }
+    .glass-social-dock { flex-wrap: wrap; max-width: 320px; }
 }
