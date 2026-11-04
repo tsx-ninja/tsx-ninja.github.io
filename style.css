@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Dark/Light Mode)
+   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Adaptive Cursor)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
@@ -19,6 +19,13 @@
     --text-secondary: rgba(226, 232, 240, 0.74);
     --text-muted: rgba(148, 163, 184, 0.68);
     --accent-core: #c084fc;
+
+    /* Cursor Variables (Dark Mode: Crisp White & Cyan Glow) */
+    --cursor-bg: #ffffff;
+    --cursor-border: rgba(56, 189, 248, 0.75);
+    --cursor-shadow: 0 0 16px rgba(56, 189, 248, 0.8), 0 0 4px rgba(255, 255, 255, 0.95);
+    --cursor-ring-border: rgba(56, 189, 248, 0.35);
+    --cursor-ring-bg: rgba(56, 189, 248, 0.06);
 
     --spatial-blur: blur(32px) saturate(180%);
     --radius-chamber: 28px;
@@ -44,6 +51,13 @@
     --text-secondary: rgba(51, 65, 85, 0.82);
     --text-muted: rgba(100, 116, 139, 0.75);
     --accent-core: #7c3aed;
+
+    /* Cursor Variables (Light Mode: Deep Black Core & Electric Blue Ring) */
+    --cursor-bg: #0f172a;
+    --cursor-border: #2563eb;
+    --cursor-shadow: 0 0 12px rgba(37, 99, 235, 0.45), 0 2px 6px rgba(15, 23, 42, 0.35);
+    --cursor-ring-border: rgba(37, 99, 235, 0.45);
+    --cursor-ring-bg: rgba(37, 99, 235, 0.08);
 }
 
 *, *::before, *::after {
@@ -106,20 +120,21 @@ body {
     right: -120px;
 }
 
-/* Custom Cursor */
+/* Adaptive Custom Cursor */
 .cursor-dot {
     position: fixed;
     top: 0;
     left: 0;
     width: 12px;
     height: 12px;
-    background: rgba(255, 255, 255, 0.95);
-    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    background: var(--cursor-bg);
+    border: 1.5px solid var(--cursor-border);
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
-    box-shadow: 0 0 18px rgba(255, 255, 255, 0.65), 0 0 4px rgba(255, 255, 255, 0.95);
+    box-shadow: var(--cursor-shadow);
     will-change: transform;
+    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cursor-dot::after {
@@ -131,8 +146,9 @@ body {
     height: 28px;
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    background: rgba(255, 255, 255, 0.04);
+    border: 1.5px solid var(--cursor-ring-border);
+    background: var(--cursor-ring-bg);
+    transition: border-color 0.25s ease, background 0.25s ease;
 }
 
 @media (hover: none), (pointer: coarse) {
