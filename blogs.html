@@ -7,7 +7,7 @@
     <title>Research & Writeups | Om Bhanushali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,106 +15,192 @@
     <div class="cursor-dot"></div>
 
     <div class="spatial-ambient" aria-hidden="true">
-        <div class="ambient-mesh-grid"></div>
         <div class="ambient-orb orb-primary"></div>
         <div class="ambient-orb orb-secondary"></div>
     </div>
 
     <nav class="glass-nav">
-        <a href="index.html" class="nav-brand">
-            <span class="status-indicator"></span> OM.BHANUSHALI // SEC-OPS
-        </a>
+        <a href="index.html" class="nav-brand">Om Bhanushali</a>
         <div class="nav-links">
-            <a href="index.html">COMMAND</a>
-            <a href="projects.html">TELEMETRY</a>
-            <a href="blogs.html" class="active">RESEARCH</a>
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
+            <a href="blogs.html" class="active">BLOGS</a>
             <a href="op.html">OPERATIONS</a>
         </div>
     </nav>
 
     <div class="container">
         <header class="hero text-center" data-aos="fade-down">
-            <div class="hero-badge">
-                <span>📡 SECURITY RESEARCH & FIELD NOTES</span>
-            </div>
-            <h1 class="glitch" data-text="RESEARCH LOGS">RESEARCH LOGS</h1>
+            <h1 class="glitch" data-text="RESEARCH & WRITEUPS">RESEARCH & WRITEUPS</h1>
             <p class="cyber-subtitle">
-                VULNERABILITY TRIAGE • EXPLOITATION METHODOLOGY • BUG BOUNTY INSIGHTS
+                📡 Medium Publication Writeups • Vulnerability Disclosures • Bug Bounty Case Studies
             </p>
             <p class="hero-description">
-                Field notes from securing 150+ organizations, triaging complex bug submissions, and mastering mobile and web application exploitation techniques.
+                Field notes and published case studies on uncovering critical access control flaws, 2FA bypasses, and high-impact bug bounty rewards on Infosec Writeups.
             </p>
         </header>
 
-        <div class="bento-grid" data-aos="fade-up">
-            <article class="spatial-card bento-main">
-                <span class="card-tag">VULNERABILITY TRIAGE & MANAGEMENT</span>
-                <h2 class="card-title">Inside the Triage Queue: Validating Bug Reports & Scoring with CVSS</h2>
-                <p class="card-desc">
-                    How a Vulnerability Triage Analyst reproduces complex submissions, filters false positives, calculates precise CVSS v3.1/v4.0 vectors, and tracks engineering remediation in Atlassian Jira.
-                </p>
-                <div class="expertise-grid" style="margin-top: 14px;">
-                    <span class="spatial-pill">CVSS v3.1 / v4.0</span>
-                    <span class="spatial-pill">Atlassian Jira</span>
-                    <span class="spatial-pill">Triage Analysis</span>
+        <div class="spatial-grid-2" data-aos="fade-up">
+            <!-- Blog 1: IDOR ($750) -->
+            <article class="spatial-card blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*5W4q7N8m87V6hXW3QzZ41A.png" alt="IDOR Writeup Cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'">
+                </div>
+                <div class="blog-content">
+                    <span class="card-tag">BUG BOUNTY • $750 REWARD</span>
+                    <h2 class="card-title">
+                        <a href="https://infosecwriteups.com/this-is-how-i-got-750-from-my-first-idor-8058061c65ba" target="_blank" rel="noopener noreferrer">
+                            This is How I Got $750 From My First IDOR
+                        </a>
+                    </h2>
+                    <p class="card-desc">
+                        A detailed breakdown of how manual parameter manipulation and broken object level authorization led to discovering my first rewarding IDOR vulnerability.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">Infosec Writeups</span>
+                    <a href="https://infosecwriteups.com/this-is-how-i-got-750-from-my-first-idor-8058061c65ba" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.78rem;">READ ON MEDIUM →</a>
                 </div>
             </article>
 
-            <article class="spatial-card bento-side">
-                <span class="card-tag">MOBILE SEC-OPS</span>
-                <h2 class="card-title" style="font-size: 1.15rem;">Frida & MobSF Instrumentation</h2>
-                <p class="card-desc" style="font-size: 0.9rem; margin-bottom: 0;">
-                    Practical methodology for decompiling binaries, hooking native runtime checks, and inspecting storage under OWASP MASVS.
-                </p>
+            <!-- Blog 2: 2FA Bypass -->
+            <article class="spatial-card blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*8z2W6q7N8m87V6hXW3QzZ4.png" alt="2FA Bypass Cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80'">
+                </div>
+                <div class="blog-content">
+                    <span class="card-tag">AUTHENTICATION FLAW</span>
+                    <h2 class="card-title">
+                        <a href="https://infosecwriteups.com/2fa-bypass-via-request-handling-flaw-e4cf21bb4c55" target="_blank" rel="noopener noreferrer">
+                            2FA Bypass via Request Handling Flaw
+                        </a>
+                    </h2>
+                    <p class="card-desc">
+                        An analysis of an application logic flaw in request response handling that permitted complete circumvention of multi-factor authentication controls.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">Infosec Writeups</span>
+                    <a href="https://infosecwriteups.com/2fa-bypass-via-request-handling-flaw-e4cf21bb4c55" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.78rem;">READ ON MEDIUM →</a>
+                </div>
             </article>
-        </div>
 
-        <div class="spatial-grid" data-aos="fade-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
-            <article class="spatial-card" style="margin-bottom: 0;">
-                <span class="card-tag">BUG BOUNTY METHODOLOGY</span>
-                <h3 class="card-title" style="font-size: 1.15rem;">Chaining IDOR to Full Account Takeover</h3>
-                <p class="card-desc" style="margin-bottom: 0;">Combining manual asset discovery with deep API state inspection to surface high-impact access control flaws.</p>
-            </article>
-
-            <article class="spatial-card" style="margin-bottom: 0;">
-                <span class="card-tag">OFFENSIVE AUTOMATION</span>
-                <h3 class="card-title" style="font-size: 1.15rem;">Scaling Recon with ReconX</h3>
-                <p class="card-desc" style="margin-bottom: 0;">Building custom Python pipelines to streamline subdomain enumeration and extract exposed secrets from JS files.</p>
+            <!-- Blog 3: $500 in Minutes -->
+            <article class="spatial-card blog-card">
+                <div class="blog-image-wrapper">
+                    <img src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*3x2W6q7N8m87V6hXW3Qz.png" alt="$500 Bug Bounty Cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'">
+                </div>
+                <div class="blog-content">
+                    <span class="card-tag">QUICK FIND • $500 REWARD</span>
+                    <h2 class="card-title">
+                        <a href="https://infosecwriteups.com/how-i-clinched-500-within-minutes-5b828ad0f5a4" target="_blank" rel="noopener noreferrer">
+                            How I Clinched $500 Within Minutes
+                        </a>
+                    </h2>
+                    <p class="card-desc">
+                        A rapid reconnaissance case study highlighting how quick asset discovery and thorough endpoint examination yielded a $500 bounty in minutes.
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <span class="company-badge">Infosec Writeups</span>
+                    <a href="https://infosecwriteups.com/how-i-clinched-500-within-minutes-5b828ad0f5a4" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 7px 16px; font-size: 0.78rem;">READ ON MEDIUM →</a>
+                </div>
             </article>
         </div>
     </div>
 
     <footer class="glass-footer">
         <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p class="footer-label">CHANNELS</p>
+        <p class="footer-label">CONNECT</p>
         <div class="footer-links">
             <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
             <a href="tel:+918879291949">+91 8879291949</a>
-            <a href="index.html">COMMAND</a>
-            <a href="projects.html">TELEMETRY</a>
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
         </div>
         <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
 
+    <style>
+        /* Extra styling for blog cards to ensure crisp image previews and tactile click feedback */
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 0 !important;
+            transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s ease, border-color 0.25s ease;
+        }
+        .blog-card:active {
+            transform: scale(0.98) !important;
+        }
+        .blog-image-wrapper {
+            width: 100%;
+            height: 180px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            background: rgba(0, 0, 0, 0.3);
+        }
+        .blog-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .blog-card:hover .blog-image-wrapper img {
+            transform: scale(1.04);
+        }
+        .blog-content {
+            padding: 26px 30px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .blog-card .card-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .blog-card .card-title a:hover {
+            color: #38bdf8;
+        }
+        .blog-card .card-footer {
+            padding: 16px 30px 26px;
+            margin-top: auto;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    </style>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
+
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
                 dot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
             });
         }
-        document.querySelectorAll('.glass-panel, .spatial-card').forEach((el) => {
+
+        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
+        spatialElements.forEach((el) => {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3;
+                const rotateY = ((x - centerX) / centerX) * 3;
+
                 el.style.transition = 'transform 0.08s ease-out';
-                el.style.transform = `perspective(1000px) rotateX(${(((y - rect.height/2)/(rect.height/2)) * -3).toFixed(2)}deg) rotateY(${(((x - rect.width/2)/(rect.width/2)) * 3).toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
                 el.style.setProperty('--mouse-y', `${y}px`);
             });
+
             el.addEventListener('mouseleave', () => {
                 el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
                 el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
