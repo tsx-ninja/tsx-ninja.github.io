@@ -174,18 +174,15 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
-        
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
                 dot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
             });
         }
-
         const themeToggleBtn = document.getElementById('theme-toggle');
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
-        
         const currentTheme = localStorage.getItem('theme') || 'dark';
         if (currentTheme === 'light') {
             document.documentElement.setAttribute('data-theme', 'light');
@@ -196,7 +193,6 @@
             if (sunIcon) sunIcon.style.display = 'none';
             if (moonIcon) moonIcon.style.display = 'block';
         }
-
         if (themeToggleBtn) {
             themeToggleBtn.addEventListener('click', () => {
                 let theme = document.documentElement.getAttribute('data-theme');
@@ -213,17 +209,13 @@
                 }
             });
         }
-
         document.querySelectorAll('.glass-panel, .spatial-card').forEach((el) => {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -3;
-                const rotateY = ((x - centerX) / centerX) * 3;
-
+                const rotateX = ((y - rect.height/2)/(rect.height/2)) * -3;
+                const rotateY = ((x - rect.width/2)/(rect.width/2)) * 3;
                 el.style.transition = 'transform 0.08s ease-out';
                 el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
