@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Technical Writeups & Triage Insights | Om Bhanushali">
-    <title>Blogs | Om Bhanushali</title>
+    <meta name="description" content="Technical Writeups & Vulnerability Triage Insights | Om Bhanushali">
+    <title>Research & Writeups | Om Bhanushali</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
@@ -15,98 +15,83 @@
     <div class="cursor-dot"></div>
 
     <div class="spatial-ambient" aria-hidden="true">
+        <div class="ambient-mesh-grid"></div>
         <div class="ambient-orb orb-primary"></div>
         <div class="ambient-orb orb-secondary"></div>
     </div>
 
     <nav class="glass-nav">
-        <a href="index.html" class="nav-brand">Om Bhanushali</a>
+        <a href="index.html" class="nav-brand">
+            <span class="status-indicator"></span> OM.BHANUSHALI // SEC-OPS
+        </a>
         <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="projects.html">PROJECTS</a>
-            <a href="blogs.html" class="active">BLOGS</a>
+            <a href="index.html">COMMAND</a>
+            <a href="projects.html">TELEMETRY</a>
+            <a href="blogs.html" class="active">RESEARCH</a>
             <a href="op.html">OPERATIONS</a>
         </div>
     </nav>
 
     <div class="container">
         <header class="hero text-center" data-aos="fade-down">
-            <h1 class="glitch" data-text="TECHNICAL WRITEUPS">TECHNICAL WRITEUPS</h1>
+            <div class="hero-badge">
+                <span>📡 SECURITY RESEARCH & FIELD NOTES</span>
+            </div>
+            <h1 class="glitch" data-text="RESEARCH LOGS">RESEARCH LOGS</h1>
             <p class="cyber-subtitle">
-                📡 Vulnerability Triage • Penetration Testing • Bug Bounty Case Studies
+                VULNERABILITY TRIAGE • EXPLOITATION METHODOLOGY • BUG BOUNTY INSIGHTS
             </p>
             <p class="hero-description">
-                Insights from triaging external vulnerability reports, conducting red team assessments, and responsibly disclosing critical flaws across 150+ organizations.
+                Field notes from securing 150+ organizations, triaging complex bug submissions, and mastering mobile and web application exploitation techniques.
             </p>
         </header>
 
-        <div class="spatial-grid-2" data-aos="fade-up">
-            <article class="spatial-card">
-                <div>
-                    <span class="card-tag">VULNERABILITY TRIAGE & MANAGEMENT</span>
-                    <h2 class="card-title">Inside the Triage Queue: Validating Bug Reports & Scoring with CVSS v3.1/v4.0</h2>
-                    <p class="card-desc">
-                        How a Vulnerability Triage Analyst reproduces complex submissions, filters out false positives, assigns accurate CVSS severity vectors, and tracks engineering remediation in Atlassian Jira.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="company-badge">CVSS v3.1/v4.0 • Atlassian Jira</span>
-                    <span class="spatial-pill">Triage Analyst</span>
-                </div>
-            </article>
-
-            <article class="spatial-card">
-                <div>
-                    <span class="card-tag">BUG BOUNTY & WEB APPSEC</span>
-                    <h2 class="card-title">Escalating Broken Access Controls & Business Logic Flaws to Account Takeover</h2>
-                    <p class="card-desc">
-                        Lessons from securing 150+ organizations: combining manual asset discovery with deep endpoint analysis to uncover critical authentication and authorization bypasses.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="company-badge">OWASP Top 10 • API Security</span>
-                    <span class="spatial-pill">Bug Bounty</span>
+        <div class="bento-grid" data-aos="fade-up">
+            <article class="spatial-card bento-main">
+                <span class="card-tag">VULNERABILITY TRIAGE & MANAGEMENT</span>
+                <h2 class="card-title">Inside the Triage Queue: Validating Bug Reports & Scoring with CVSS</h2>
+                <p class="card-desc">
+                    How a Vulnerability Triage Analyst reproduces complex submissions, filters false positives, calculates precise CVSS v3.1/v4.0 vectors, and tracks engineering remediation in Atlassian Jira.
+                </p>
+                <div class="expertise-grid" style="margin-top: 14px;">
+                    <span class="spatial-pill">CVSS v3.1 / v4.0</span>
+                    <span class="spatial-pill">Atlassian Jira</span>
+                    <span class="spatial-pill">Triage Analysis</span>
                 </div>
             </article>
 
-            <article class="spatial-card">
-                <div>
-                    <span class="card-tag">MOBILE PENETRATION TESTING</span>
-                    <h2 class="card-title">Dynamic Mobile Instrumentation with Frida & MobSF Under OWASP MASVS</h2>
-                    <p class="card-desc">
-                        Practical methodology for analyzing Android and iOS binaries, bypassing runtime protections with Frida hooks, and uncovering insecure credential storage.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="company-badge">eMAPT • OWASP MASVS</span>
-                    <span class="spatial-pill">Frida & MobSF</span>
-                </div>
+            <article class="spatial-card bento-side">
+                <span class="card-tag">MOBILE SEC-OPS</span>
+                <h2 class="card-title" style="font-size: 1.15rem;">Frida & MobSF Instrumentation</h2>
+                <p class="card-desc" style="font-size: 0.9rem; margin-bottom: 0;">
+                    Practical methodology for decompiling binaries, hooking native runtime checks, and inspecting storage under OWASP MASVS.
+                </p>
+            </article>
+        </div>
+
+        <div class="spatial-grid" data-aos="fade-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px;">
+            <article class="spatial-card" style="margin-bottom: 0;">
+                <span class="card-tag">BUG BOUNTY METHODOLOGY</span>
+                <h3 class="card-title" style="font-size: 1.15rem;">Chaining IDOR to Full Account Takeover</h3>
+                <p class="card-desc" style="margin-bottom: 0;">Combining manual asset discovery with deep API state inspection to surface high-impact access control flaws.</p>
             </article>
 
-            <article class="spatial-card">
-                <div>
-                    <span class="card-tag">OFFENSIVE PYTHON AUTOMATION</span>
-                    <h2 class="card-title">Building ReconX: Automating Endpoint Extraction & Archive Secret Scanning</h2>
-                    <p class="card-desc">
-                        How custom Python pipelines accelerate reconnaissance by chaining subdomain discovery with automated JavaScript and <code>.zip</code> archive parsing for exposed API keys.
-                    </p>
-                </div>
-                <div class="card-footer">
-                    <span class="company-badge">Python • ReconX</span>
-                    <a href="projects.html" class="btn btn-secondary" style="padding: 7px 16px; font-size: 0.76rem;">VIEW PROJECT</a>
-                </div>
+            <article class="spatial-card" style="margin-bottom: 0;">
+                <span class="card-tag">OFFENSIVE AUTOMATION</span>
+                <h3 class="card-title" style="font-size: 1.15rem;">Scaling Recon with ReconX</h3>
+                <p class="card-desc" style="margin-bottom: 0;">Building custom Python pipelines to streamline subdomain enumeration and extract exposed secrets from JS files.</p>
             </article>
         </div>
     </div>
 
     <footer class="glass-footer">
         <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p class="footer-label">CONNECT</p>
+        <p class="footer-label">CHANNELS</p>
         <div class="footer-links">
             <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
             <a href="tel:+918879291949">+91 8879291949</a>
-            <a href="index.html">HOME</a>
-            <a href="op.html">OPERATIONS</a>
+            <a href="index.html">COMMAND</a>
+            <a href="projects.html">TELEMETRY</a>
         </div>
         <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
@@ -114,31 +99,22 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
-
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
-                dot.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
+                dot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
             });
         }
-
-        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
-        spatialElements.forEach((el) => {
+        document.querySelectorAll('.glass-panel, .spatial-card').forEach((el) => {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                const rotateX = ((y - centerY) / centerY) * -3.5;
-                const rotateY = ((x - centerX) / centerX) * 3.5;
-
                 el.style.transition = 'transform 0.08s ease-out';
-                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+                el.style.transform = `perspective(1000px) rotateX(${(((y - rect.height/2)/(rect.height/2)) * -3).toFixed(2)}deg) rotateY(${(((x - rect.width/2)/(rect.width/2)) * 3).toFixed(2)}deg) scale3d(1.006, 1.006, 1.006)`;
                 el.style.setProperty('--mouse-x', `${x}px`);
                 el.style.setProperty('--mouse-y', `${y}px`);
             });
-
             el.addEventListener('mouseleave', () => {
                 el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
                 el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
