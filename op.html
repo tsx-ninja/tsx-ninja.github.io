@@ -167,12 +167,27 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 900, once: true });
+        
         const dot = document.querySelector('.cursor-dot');
         if (dot) {
             window.addEventListener('mousemove', (e) => {
+                dot.style.opacity = '1';
                 dot.style.transform = `translate(${e.clientX - 6}px, ${e.clientY - 6}px)`;
             });
+            document.addEventListener('mouseleave', () => {
+                dot.style.opacity = '0';
+            });
+            document.addEventListener('mouseenter', () => {
+                dot.style.opacity = '1';
+            });
+            window.addEventListener('blur', () => {
+                dot.style.opacity = '0';
+            });
+            window.addEventListener('focus', () => {
+                dot.style.opacity = '1';
+            });
         }
+
         const themeToggleBtn = document.getElementById('theme-toggle');
         const sunIcon = document.getElementById('sun-icon');
         const moonIcon = document.getElementById('moon-icon');
@@ -186,6 +201,7 @@
             if (sunIcon) sunIcon.style.display = 'none';
             if (moonIcon) moonIcon.style.display = 'block';
         }
+
         if (themeToggleBtn) {
             themeToggleBtn.addEventListener('click', () => {
                 let theme = document.documentElement.getAttribute('data-theme');
@@ -202,6 +218,7 @@
                 }
             });
         }
+
         document.querySelectorAll('.glass-panel, .spatial-card').forEach((el) => {
             el.addEventListener('mousemove', (e) => {
                 const rect = el.getBoundingClientRect();
