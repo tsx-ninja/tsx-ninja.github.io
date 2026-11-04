@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Adaptive Cursor)
+   SPATIAL UI DESIGN SYSTEM (Adaptive Cursor + Window-Leave Hide Edition)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
@@ -117,6 +117,7 @@ body {
     right: -120px;
 }
 
+/* Adaptive Custom Cursor with Fade-Out Support */
 .cursor-dot {
     position: fixed;
     top: 0;
@@ -129,8 +130,9 @@ body {
     pointer-events: none;
     z-index: 99999;
     box-shadow: var(--cursor-shadow);
-    will-change: transform;
-    transition: background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    will-change: transform, opacity;
+    opacity: 0; /* Hidden by default until mouse moves inside */
+    transition: opacity 0.2s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .cursor-dot::after {
