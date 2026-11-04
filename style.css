@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Enlarged Avatar Logo Edition + Adaptive Cursor)
+   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Adaptive Cursor)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
@@ -176,7 +176,6 @@ body {
     text-decoration: none !important;
 }
 
-/* ENLARGED NAVBAR LOGO (48px) */
 .nav-avatar {
     width: 48px !important;
     height: 48px !important;
