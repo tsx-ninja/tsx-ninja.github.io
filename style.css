@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Clean Professional Edition + Adaptive Cursor)
+   SPATIAL UI DESIGN SYSTEM (Samurai Avatar Logo + Adaptive Cursor Edition)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
@@ -155,14 +155,14 @@ body {
     .cursor-dot { display: none !important; }
 }
 
-/* Floating Navigation with Guaranteed Logo Separation */
+/* Floating Navigation with Samurai Avatar Logo */
 .glass-nav {
     position: sticky;
     top: 20px;
     z-index: 1000;
     max-width: 960px;
     margin: 20px auto 0;
-    padding: 10px 22px;
+    padding: 8px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -178,31 +178,24 @@ body {
 .nav-brand {
     display: inline-flex !important;
     align-items: center !important;
-    gap: 12px !important;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: -0.01em;
-    color: var(--text-primary) !important;
     text-decoration: none !important;
 }
 
-.nav-logo-icon {
-    width: 34px !important;
-    height: 34px !important;
-    min-width: 34px !important;
-    margin-right: 4px;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: linear-gradient(135deg, rgba(192, 132, 252, 0.28), rgba(56, 189, 248, 0.22)) !important;
-    border: 1.5px solid rgba(192, 132, 252, 0.55) !important;
+.nav-avatar {
+    width: 42px !important;
+    height: 42px !important;
     border-radius: 50% !important;
-    font-weight: 800 !important;
-    font-size: 0.76rem !important;
-    letter-spacing: 0.03em !important;
-    color: var(--accent-core) !important;
-    box-shadow: 0 0 12px rgba(192, 132, 252, 0.35) !important;
-    flex-shrink: 0 !important;
+    object-fit: cover !important;
+    border: 1.5px solid rgba(239, 68, 68, 0.65) !important;
+    box-shadow: 0 0 14px rgba(239, 68, 68, 0.35), inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+    transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    display: block !important;
+}
+
+.nav-brand:hover .nav-avatar {
+    transform: scale(1.08) rotate(-3deg) !important;
+    border-color: #ef4444 !important;
+    box-shadow: 0 0 22px rgba(239, 68, 68, 0.65) !important;
 }
 
 .nav-right-cluster {
