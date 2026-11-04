@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SPATIAL UI DESIGN SYSTEM (Samurai Avatar Logo + Adaptive Cursor Edition)
+   SPATIAL UI DESIGN SYSTEM (Enlarged Avatar Logo Edition + Adaptive Cursor)
    Author: Om Bhanushali Portfolio
    ========================================================================== */
 
@@ -20,7 +20,6 @@
     --text-muted: rgba(148, 163, 184, 0.68);
     --accent-core: #c084fc;
 
-    /* Cursor Variables (Dark Mode: Crisp White & Cyan Glow) */
     --cursor-bg: #ffffff;
     --cursor-border: rgba(56, 189, 248, 0.75);
     --cursor-shadow: 0 0 16px rgba(56, 189, 248, 0.8), 0 0 4px rgba(255, 255, 255, 0.95);
@@ -34,7 +33,6 @@
     --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-/* Light Mode Overrides */
 [data-theme="light"] {
     --bg-canvas: #f1f5f9;
     --glass-surface: rgba(255, 255, 255, 0.75);
@@ -52,7 +50,6 @@
     --text-muted: rgba(100, 116, 139, 0.75);
     --accent-core: #7c3aed;
 
-    /* Cursor Variables (Light Mode: Deep Black Core & Electric Blue Ring) */
     --cursor-bg: #0f172a;
     --cursor-border: #2563eb;
     --cursor-shadow: 0 0 12px rgba(37, 99, 235, 0.45), 0 2px 6px rgba(15, 23, 42, 0.35);
@@ -120,7 +117,6 @@ body {
     right: -120px;
 }
 
-/* Adaptive Custom Cursor */
 .cursor-dot {
     position: fixed;
     top: 0;
@@ -155,7 +151,6 @@ body {
     .cursor-dot { display: none !important; }
 }
 
-/* Floating Navigation with Samurai Avatar Logo */
 .glass-nav {
     position: sticky;
     top: 20px;
@@ -181,21 +176,26 @@ body {
     text-decoration: none !important;
 }
 
+/* ENLARGED NAVBAR LOGO (48px) */
 .nav-avatar {
-    width: 42px !important;
-    height: 42px !important;
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    max-width: 48px !important;
+    min-height: 48px !important;
+    max-height: 48px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
-    border: 1.5px solid rgba(239, 68, 68, 0.65) !important;
-    box-shadow: 0 0 14px rgba(239, 68, 68, 0.35), inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
-    transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease, border-color 0.3s ease !important;
+    border: 2px solid rgba(56, 189, 248, 0.8) !important;
+    box-shadow: 0 0 16px rgba(56, 189, 248, 0.45) !important;
+    transition: transform 0.3s var(--transition-smooth), box-shadow 0.3s ease !important;
     display: block !important;
 }
 
 .nav-brand:hover .nav-avatar {
-    transform: scale(1.08) rotate(-3deg) !important;
-    border-color: #ef4444 !important;
-    box-shadow: 0 0 22px rgba(239, 68, 68, 0.65) !important;
+    transform: scale(1.1) rotate(-3deg) !important;
+    border-color: #38bdf8 !important;
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.8) !important;
 }
 
 .nav-right-cluster {
@@ -233,7 +233,6 @@ body {
     border: 1px solid rgba(192, 132, 252, 0.35);
 }
 
-/* Theme Toggle Button */
 .theme-toggle-btn {
     width: 38px;
     height: 38px;
@@ -259,7 +258,6 @@ body {
     fill: currentColor;
 }
 
-/* Layout Container */
 .container {
     max-width: 960px;
     margin: 0 auto;
@@ -313,7 +311,6 @@ body {
     gap: 14px;
 }
 
-/* Buttons */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -349,7 +346,6 @@ body {
     box-shadow: var(--specular-top), 0 14px 28px rgba(0, 0, 0, 0.45);
 }
 
-/* 3D Perspective Glass Panels */
 .glass-panel, .chamber, .spatial-card {
     position: relative;
     overflow: hidden;
@@ -425,7 +421,6 @@ body {
 
 .section-text strong { color: var(--text-primary); font-weight: 600; }
 
-/* Experience Item */
 .experience-item {
     padding: 24px 26px;
     background: var(--glass-pill);
@@ -545,7 +540,6 @@ body {
     line-height: 1.68;
 }
 
-/* Floating Social Media Dock */
 .glass-social-dock {
     display: flex;
     justify-content: center;
@@ -596,7 +590,6 @@ body {
     transform: scale(1.12);
 }
 
-/* Footer */
 .glass-footer {
     text-align: center;
     padding: 44px 20px 56px;
