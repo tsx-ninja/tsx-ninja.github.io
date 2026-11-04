@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Offensive Operations & Vulnerability Triage | Om Bhanushali">
     <title>Operations | Om Bhanushali</title>
-    <link rel="stylesheet" href="style.css?v=31">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <div class="cursor-dot"></div>
+
+    <div class="spatial-ambient" aria-hidden="true">
+        <div class="ambient-orb orb-primary"></div>
+        <div class="ambient-orb orb-secondary"></div>
+    </div>
+
     <nav class="glass-nav">
-        <div class="nav-brand">Om Bhanushali</div>
+        <a href="index.html" class="nav-brand">Om Bhanushali</a>
         <div class="nav-links">
             <a href="index.html">HOME</a>
             <a href="projects.html">PROJECTS</a>
@@ -20,79 +30,155 @@
     </nav>
 
     <div class="container">
-        <header class="hero glass-panel text-center" data-aos="fade-down" style="min-height: auto; padding: 40px;">
-            <h1 class="neon-heading">OFFENSIVE OPERATIONS</h1>
-            <p class="cyber-subtitle">🎯 Comprehensive Security Testing Solutions</p>
-            <p>Specialized penetration testing operations designed to identify vulnerabilities before adversaries do. From web applications to mobile platforms, I provide thorough security assessments with actionable findings.</p>
+        <header class="hero text-center" data-aos="fade-down">
+            <h1 class="glitch" data-text="OFFENSIVE OPERATIONS">OFFENSIVE OPERATIONS</h1>
+            <p class="cyber-subtitle">
+                🎯 Penetration Testing • Vulnerability Triage • Red Team Assessments
+            </p>
+            <p class="hero-description">
+                Specialized penetration testing and vulnerability management operations designed to identify, validate, and remediate critical threats across web, mobile, API, and enterprise environments.
+            </p>
         </header>
 
-        <h2 class="neon-heading" style="margin-top: 40px;" data-aos="fade-right">PRIMARY DIRECTIVES</h2>
-        <div class="services-grid">
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>🌐 Web App PT</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">OWASP Top 10 Assessment</p>
-                <p>Thorough testing of web applications to identify logic flaws, IDOR, SSRF, and ATOs. Includes API security, session management, and detailed PoC demonstrations.</p>
-            </div>
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>📱 Mobile App PT</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">iOS & Android (eMAPT Certified)</p>
-                <p>In-depth security assessment of mobile architectures. Binary analysis, Frida hooking, network interception, and insecure data storage evaluation.</p>
-            </div>
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="300">
-                <h3>🔴 Red Team Ops</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">Adversarial Simulation</p>
-                <p>Realistic attack simulations to test detection capabilities. Network recon, initial access, lateral movement, and privilege escalation attempts.</p>
-            </div>
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="100">
-                <h3>🔍 API Security</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">REST & GraphQL</p>
-                <p>Endpoint enumeration, auth bypass testing, rate limit evaluation, and data exposure assessment.</p>
-            </div>
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="200">
-                <h3>☁️ Cloud Security</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">AWS, Azure & GCP</p>
-                <p>IAM policy analysis, storage bucket configurations, and privilege escalation testing within cloud-native apps.</p>
-            </div>
-            <div class="glass-panel service-card" data-aos="fade-up" data-aos-delay="300">
-                <h3>📋 Vulnerability Analyst</h3>
-                <p style="color: var(--accent-purple); font-size: 0.9rem; margin-bottom: 10px;">Validation & Triaging</p>
-                <p>Triaging valid vulnerability reports, validating findings to ensure zero false positives, calculating accurate CVSS scores, and providing actionable remediation guidance.</p>
-            </div>
-        </div>
+        <section class="glass-panel chamber" data-aos="fade-up">
+            <h2 class="neon-heading">PRIMARY DIRECTIVES</h2>
+            <div class="spatial-grid" style="margin-bottom: 0;">
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">🌐</div>
+                        <span class="card-tag">OWASP Top 10 Assessment</span>
+                        <h3 class="card-title">Web App PT</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            Thorough manual and automated testing of web applications to identify broken access controls (IDOR), SSRF, XSS, and authentication flaws with full PoC demonstrations.
+                        </p>
+                    </div>
+                </article>
 
-        <section id="contact-form" class="glass-panel contact-section" data-aos="fade-up" style="margin-top: 60px;">
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">📱</div>
+                        <span class="card-tag">iOS & Android (eMAPT Certified)</span>
+                        <h3 class="card-title">Mobile App PT</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            In-depth security assessment of mobile architectures mapped to OWASP MASVS. Binary analysis, Frida runtime hooking, MobSF evaluation, and traffic interception.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">📋</div>
+                        <span class="card-tag">CVSS v3.1/v4.0 & Jira Workflows</span>
+                        <h3 class="card-title">Vulnerability Triage Analyst</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            Analyzing, reproducing, and validating incoming vulnerability reports to eliminate false positives, calculate accurate CVSS vectors, and guide engineering teams through remediation verification.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">🔴</div>
+                        <span class="card-tag">MITRE ATT&CK Mapped</span>
+                        <h3 class="card-title">Red Team Ops</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            Authorized adversarial simulations across web, API, and enterprise network environments covering reconnaissance, initial access, and privilege escalation.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">🔍</div>
+                        <span class="card-tag">REST & GraphQL</span>
+                        <h3 class="card-title">API Security</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            Comprehensive endpoint extraction, authorization bypass testing, rate-limit evaluation, and sensitive data exposure assessment.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="spatial-card">
+                    <div>
+                        <div class="card-icon">🛡️</div>
+                        <span class="card-tag">Qualys • Nessus • Remediation</span>
+                        <h3 class="card-title">Vulnerability Management</h3>
+                        <p class="card-desc" style="margin-bottom: 0;">
+                            Continuous vulnerability assessment, risk prioritization, and direct collaboration with QA and engineering teams to verify security patches.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact-form" class="glass-panel chamber contact-chamber" data-aos="fade-up">
             <h2 class="neon-heading">INITIATE CONTACT</h2>
-            <p class="text-center" style="margin-bottom: 20px;">Submit scope or RFP directly to secure communication channels.</p>
-            
-            <form action="https://formspree.io/f/xnjklklp" method="POST" class="cyber-form">
-                <input type="text" name="name" placeholder="YOUR NAME / ALIAS" required>
-                <input type="email" name="email" placeholder="EMAIL" required>
-                <textarea name="message" placeholder="TYPE YOUR QUERIES" rows="5" required></textarea>
-                <button type="submit" class="btn">SUBMIT</button>
+            <p class="contact-subtext">
+                Submit your target scope, triage requirement, or engagement inquiry directly.
+            </p>
+
+            <form class="spatial-form" action="mailto:ombhanushali81@rediffmail.com" method="post" enctype="text/plain">
+                <div class="form-group">
+                    <label for="name">YOUR NAME / ALIAS *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name or organization" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">EMAIL *</label>
+                    <input type="email" id="email" name="email" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">TYPE YOUR QUERIES *</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Describe target scope, timeline, or engagement requirements..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">SUBMIT</button>
             </form>
         </section>
     </div>
 
-    <footer class="glass-footer" style="margin-top: 40px;">
-        <p>⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
-        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">SOCIAL</p>
+    <footer class="glass-footer">
+        <p class="footer-tagline">⚡ Om Bhanushali | SECURING THE DIGITAL FRONTIER</p>
+        <p class="footer-label">CONNECT</p>
         <div class="footer-links">
-            <a href="https://www.linkedin.com/in/tsxninja/" target="_blank">LinkedIn</a>
-            <a href="https://www.youtube.com/@TSNINJA20" target="_blank">YouTube</a>
-            <a href="#contact-form">Email</a>
+            <a href="mailto:ombhanushali81@rediffmail.com">EMAIL</a>
+            <a href="tel:+918879291949">+91 8879291949</a>
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
         </div>
-        <p style="color: var(--text-secondary); font-size: 0.75rem; margin-top: 2.5rem; letter-spacing: 1px;">&copy; 2026 Om Bhanushali. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Om Bhanushali. All rights reserved.</p>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({
-            duration: 1000,
-            once: true
-        });
+        AOS.init({ duration: 900, once: true });
+
         const dot = document.querySelector('.cursor-dot');
-        window.addEventListener('mousemove', (e) => {
-            dot.style.transform = `translate(${e.clientX - 4}px, ${e.clientY - 4}px)`;
+        if (dot) {
+            window.addEventListener('mousemove', (e) => {
+                dot.style.transform = `translate(${e.clientX - 5}px, ${e.clientY - 5}px)`;
+            });
+        }
+
+        const spatialElements = document.querySelectorAll('.glass-panel, .spatial-card');
+        spatialElements.forEach((el) => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * -3.5;
+                const rotateY = ((x - centerX) / centerX) * 3.5;
+
+                el.style.transition = 'transform 0.08s ease-out';
+                el.style.transform = `perspective(1000px) rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.008, 1.008, 1.008)`;
+                el.style.setProperty('--mouse-x', `${x}px`);
+                el.style.setProperty('--mouse-y', `${y}px`);
+            });
+
+            el.addEventListener('mouseleave', () => {
+                el.style.transition = 'transform 0.55s cubic-bezier(0.22, 1, 0.36, 1)';
+                el.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
         });
     </script>
 </body>
